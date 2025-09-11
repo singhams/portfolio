@@ -1,0 +1,9 @@
+title: My Portfolio
+author: Sara Ingham
+baseurl: ""
+url: "https://singhams.github.io"
+collections:
+  case-studies:
+    output: true
+  artifacts:
+    output: true
