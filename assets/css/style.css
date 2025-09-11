@@ -116,12 +116,12 @@ footer { text-align: center; margin-top: 2rem; font-size: 0.9rem; }
 
 .theme-toggle .sun {
   transform: rotate(0deg);
-  opacity: 1;
+  opacity: 0;
 }
 
 .theme-toggle .moon {
   transform: rotate(90deg);
-  opacity: 0;
+  opacity: 1;
 }
 
 body.dark-mode .theme-toggle {
@@ -130,10 +130,10 @@ body.dark-mode .theme-toggle {
 
 body.dark-mode .theme-toggle .sun {
   transform: rotate(-90deg);
-  opacity: 0;
+  opacity: 1;
 }
 
 body.dark-mode .theme-toggle .moon {
   transform: rotate(0deg);
-  opacity: 1;
+  opacity: 0;
 }
