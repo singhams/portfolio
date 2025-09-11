@@ -6,7 +6,7 @@ permalink: /case-studies/
 
 <h2>Case Studies</h2>
 <div class="cards">
-{% for cs in site.case-studies %}
+{% for cs in site.case_studies %}
   <div class="card">
     <a href="{{ cs.url }}">
       {% if cs.image %}
