@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Case Studies
-parmalink: /case-studies/
+permalink: /case-studies/
 ---
 
 <h2>Case Studies</h2>
