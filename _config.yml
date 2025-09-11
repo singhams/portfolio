@@ -3,7 +3,7 @@ author: Sara Ingham
 baseurl: ""
 url: "https://singhams.github.io"
 collections:
-  case-studies:
+  case_studies:
     output: true
   artifacts:
     output: true
