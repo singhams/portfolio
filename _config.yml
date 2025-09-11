@@ -1,6 +1,6 @@
 title: My Portfolio
 author: Sara Ingham
-baseurl: ""
+baseurl: "portfolio"
 url: "https://singhams.github.io"
 collections:
   case_studies:
