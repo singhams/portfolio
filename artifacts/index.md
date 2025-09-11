@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Artifacts
+permalink: /case-studies/
 ---
 
 <h2>Artifacts</h2>
