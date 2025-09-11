@@ -10,7 +10,7 @@ title: Home
 </header>
 
 ## Featured Case Studies
-{% for cs in site.case-studies %}
+{% for cs in site.case_studies %}
 - [{{ cs.title }}]({{ cs.url }})
 {% endfor %}
 
