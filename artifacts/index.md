@@ -6,7 +6,7 @@ permalink: /artifacts/
 
 <h2>Artifacts</h2>
 <div class="cards">
-{% for artifact in site._artifacts %}
+{% for artifact in site.artifacts %}
   <div class="card">
     <a href="{{ artifact.url }}">
       {% if artifact.image %}
