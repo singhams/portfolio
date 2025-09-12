@@ -73,7 +73,7 @@ nav a:hover {
 /* Active page highlight */
 nav a.active {
   background: var(--bg-color);
-  color: #fff;
+  color: var(--text-color);
   border: 2px solid var(--secondary-color);
 }
 
@@ -88,9 +88,9 @@ nav a.active {
 }
 
 .theme-toggle .icon {
-  width: 15px;
-  height: 15px;
-  display: none;
+  width: 10px;
+  height: 10px;
+  /* display: none; */
 }
 
 body.light .theme-toggle .sun {
