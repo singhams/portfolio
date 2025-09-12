@@ -1,22 +1,23 @@
-/* Reset and base */
-* { 
-  margin: 0; 
-  padding: 0; 
-  box-sizing: border-box; 
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body { 
-  font-family: 'Noto Sans', sans-serif; 
-  line-height: 1.6; 
-  background-color: var(--bg-color); 
-  color: var(--text-color); 
+body {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-a { 
-  text-decoration: none; 
-  color: var(--primary-color); 
+a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
+/* Theme Variables */
 :root {
   /* Light Mode Colors */
   --bg-color: #ffffff;
@@ -34,7 +35,6 @@ a {
   --meta-text: #E04852;
 }
 
-/* Dark mode overrides */
 body.dark-mode {
   --bg-color: #242424;
   --text-color: #FFFFFF;
@@ -51,22 +51,28 @@ body.dark-mode {
   --meta-text: #FFACB1;
 }
 
-/* Container */
-.container { max-width: 960px; margin: 0 auto; padding: 2rem; }
+/* Containers */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-/***************NEW NAVIGATION***********************/
+/*************** DESKTOP NAVIGATION ***********************/
 
 /* Navigation container */
 nav .nav-container {
   display: flex;
-  justify-content: space-between; /* Space between nav menu and toggle button */
   align-items: center;
   gap: 1rem;
   position: relative;
   margin: 1rem;
+  padding: .5rem;
+  border: 2px solid var(--card-bg);
+  border-radius: 100px;
 }
 
-/* Nav menu */
+/* Desktop Nav menu */
 #nav-menu {
   display: flex;
   gap: 1.5rem;
@@ -76,131 +82,23 @@ nav .nav-container {
   transition: max-height 0.3s ease;
 }
 
-/* Desktop: menu fully visible */
-@media(min-width: 769px) {
-  #nav-menu {
-    flex-direction: row;
-    max-height: none;
-  }
+#mobile-nav-menu {
+  display: none; /* Hide Mobile nav menu on desktop */
 }
 
-/* Mobile: hide by default */
-@media(max-width: 768px) {
-  #nav-menu {
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-    gap: 1rem;
-    max-height: 0;
-    overflow: hidden;
-  }
-
-  #nav-menu.mobile-visible {
-    max-height: 500px; /* Adjust for number of items */
-  }
-
-  #hamburger {
-    display: flex;
-  }
+#mobile-mode-toggle {
+  display: none; /* Hide Mobile nav on desktop */
 }
 
-/* Nav links */
-nav a {
-  padding: 1rem;
-  border-radius: 100px;
-  text-decoration: none;
-  color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-/* Hover effect */
-nav a:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* Active page highlight */
-nav a.active {
-  background: var(--bg-color);
-  color: var(--text-color);
-  border: 2px solid var(--secondary-color);
-}
-
-/* Theme toggle */
-.theme-toggle {
-  margin-left: 1rem;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.theme-toggle .icon {
-  width: 16px;
-  height: 16px;
-}
-
-body.light .theme-toggle .sun { display: none; }
-body.light .theme-toggle .moon { display: block; }
-body.dark .theme-toggle .sun { display: block; }
-body.dark .theme-toggle .moon { display: none; }
-
-/* Hamburger button */
-#hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px; /* Increased size for better visibility */
-  height: 24px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-#hamburger span {
-  display: block;
-  height: 3px;
-  background: var(--text-color);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Hamburger animation when active */
-#hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-#hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-#hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Responsive */
-@media(max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-  }
-  nav ul.mobile-visible {
-    max-height: 500px; /* adjust for number of items */
-  }
-  #hamburger {
-    display: flex;
-  }
-}
-
-
-/***************NAVIGATION***********************
-
-nav {
-  padding: 1rem;
+#nav-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  max-width: fit-content; /* Shrinks to fit content */
+  margin: 0 auto; /* Centers the container */
+  margin-top: 1rem;
+  border: 2px solid var(--card-bg);
+  border-radius: 100px;
 }
 
 nav ul {
@@ -208,138 +106,26 @@ nav ul {
   justify-content: center;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
   padding: 1rem;
   border-radius: 100px;
-  text-decoration: none;
   color: var(--text-color);
   transition: all 0.3s ease;
 }
 
-/* Hover effect *
 nav a:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* Active page highlight *
-nav a.active {
   background: var(--bg-color);
-  color: var(--text-color);
   border: 2px solid var(--secondary-color);
 }
 
-/* Keep theme toggle aligned *
-.theme-toggle {
-  margin-left: 1rem;
-  /* background: none; *
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
+nav a.active {
+  background: var(--bg-color);
+  border: 2px solid var(--secondary-color);
 }
 
-.theme-toggle .icon {
-  width: 10px;
-  height: 10px;
-  /* display: none; *
-}
-
-body.light .theme-toggle .sun {
-  display: none;
-}
-
-body.light .theme-toggle .moon {
-  display: block;
-}
-
-body.dark .theme-toggle .sun {
-  display: block;
-}
-
-body.dark .theme-toggle .moon {
-  display: none;
-} 
-/******************************************************/
-
-/* Headings */
-h1,h2,h3 { 
-  margin-bottom: .5rem; 
-  margin-top: 1rem
-}
-
-/* Paragraphs */
-p { 
-  margin-bottom: 1rem;
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-/* Cards for case studies / artifacts */
-.cards { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 1rem; 
-  /* margin-top: 2rem; */
-}
-.card { 
-  border: 1px solid var(--card-border); 
-  padding: 1rem; 
-  border-radius: 8px; 
-  background: var(--card-bg); 
-  transition: transform 0.2s ease; 
-}
-.card:hover { 
-  transform: translateY(-5px); 
-}
-
-/* Resume iframe */
-iframe, object { width: 100%; height: 800px; border: 1px solid var(--card-border); }
-
-/* Responsive tweaks */
-@media(max-width:600px) { nav ul { flex-direction: column; } }
-
-/* Hero section */
-.hero { 
-  /*background: var(--hero-bg); */
-  color: var(--hero-text); 
-  padding: 6rem 2rem; 
-  text-align: center; 
-}
-.hero h1 { 
-  font-size: 2.5rem; 
-  margin-bottom: 1rem; }
-.hero p { 
-  font-size: 1.2rem; 
-  margin-bottom: 2rem; 
-  max-width: 600px; 
-  margin-left: auto; 
-  margin-right: auto; }
-.btn { 
-  display: inline-block; 
-  background: var(--btn-bg); 
-  color: var(--btn-text); 
-  padding: 0.8rem 1.5rem; 
-  border-radius: 5px; 
-  font-weight: bold; 
-  transition: background 0.2s ease, color 0.2s ease; 
-}
-.btn:hover { 
-  background: var(--btn-hover-bg); 
-  color: var(--btn-hover-text); 
-}
-
-/* Case Study Page */
-header h1 { font-size: 2rem; margin-bottom: 1rem; }
-header .meta { font-size: 0.9rem; color: var(--meta-text); }
-section { margin-bottom: 2rem; }
-section h2 { font-size: 1.5rem; margin-bottom: 1rem; }
-ul, ol { margin-left: 2rem; }
-footer { text-align: center; margin-top: 2rem; font-size: 0.9rem; }
-
+/* Theme Toggle */
 .theme-toggle {
   width: 50px;
   height: 50px;
@@ -372,10 +158,6 @@ footer { text-align: center; margin-top: 2rem; font-size: 0.9rem; }
   opacity: 1;
 }
 
-body.dark-mode .theme-toggle {
-  background: var(--btn-bg);
-}
-
 body.dark-mode .theme-toggle .sun {
   transform: rotate(-90deg);
   opacity: 1;
@@ -384,4 +166,205 @@ body.dark-mode .theme-toggle .sun {
 body.dark-mode .theme-toggle .moon {
   transform: rotate(0deg);
   opacity: 0;
+}
+
+/* Mobile Navigation - visible at < 600px width*/
+@media (max-width: 600px) {
+  /* Hide the desktop navigation */
+  #nav-container {
+    display: none;
+  }
+
+  /* Mobile Navigation Container */
+  #mobile-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; /* Pin to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    background: var(--bg-color);
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+
+  /* Hamburger Button */
+  #hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Center the spans horizontally */
+    width: 30px;
+    height: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Ensure it stays above the nav menu */
+  }
+
+  #hamburger span {
+    display: block;
+    width: 100%; /* Ensure spans stretch to the full width of the button */
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Hamburger Animation When Active */
+  #hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px); /* Adjusted for better alignment */
+  }
+  #hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+  }
+  #hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); /* Adjusted for better alignment */
+  }
+
+  /* Mobile Navigation Menu */
+  #mobile-nav-menu {
+    display: none; /* Hidden by default */
+    top: 60px; /* Adjust to position below the mobile nav bar */
+    overflow-y: auto; /* Add scrolling if the menu exceeds the viewport height */
+    max-height: calc(100vh - 60px); /* Prevent it from exceeding the viewport height */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    list-style: none;
+    background: var(--bg-color);
+    position: absolute;
+    top: 100%; /* Position below the mobile nav bar */
+    left: 0;
+    width: 100%; /* Full width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure it appears below the nav bar but above other content */
+  }
+
+  #mobile-nav-menu li {
+    width: 100%;
+  }
+
+  #mobile-nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: var(--text-color);
+    text-align: left;
+    border-radius: 0;
+    transition: background 0.3s ease;
+  }
+
+  #mobile-nav-menu a:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Show Mobile Navigation When Active */
+  #mobile-nav-container.mobile-visible #mobile-nav-menu {
+    display: flex;
+  }
+
+  /* Mobile Theme Toggle */
+  #mobile-mode-toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: var(--btn-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+}
+  
+/*************** TYPOGRAPHY ***********************/
+
+h1, h2, h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/*************** COMPONENTS ***********************/
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--card-border);
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--card-bg);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+
+/* Hero Section */
+.hero {
+  color: var(--hero-text);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Resume iframe */
+iframe, object {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--card-border);
+}
+
+/*************** RESPONSIVE ***********************/
+
+
+@media(max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: left;
+    gap: 0;
+    max-height: 0;
+  }
 }
