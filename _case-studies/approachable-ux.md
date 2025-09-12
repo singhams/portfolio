@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Approachable UX for Pro Video Editing Software
+layout: default
+title: "Approachable UX for Pro Video Editing Software"
 ---
 
 # Approachable UX for Pro Video Editing Software
