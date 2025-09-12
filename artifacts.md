@@ -8,13 +8,13 @@ permalink: /artifacts/
 <div class="cards">
 {% for artifact in site.artifacts %}
   <div class="card">
-    <a href="{{ cs.url | relative_url }}">
-      {% if cs.image %}
-      <img src="{{ cs.image | relative_url }}" alt="{{ cs.title }} screenshot">
+    <a href="{{ artifact.url | relative_url }}">
+      {% if artifact.image %}
+      <img src="{{ artifact.image | relative_url }}" alt="{{ artifact.title }} screenshot">
       {% endif %}
-      <h3>{{ cs.title }}</h3>
-      {% if cs.excerpt %}
-      <p>{{ cs.excerpt }}</p>
+      <h3>{{ artifact.title }}</h3>
+      {% if artifact.excerpt %}
+      <p>{{ artifact.excerpt }}</p>
       {% endif %}
     </a>
   </div>
