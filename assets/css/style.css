@@ -1,7 +1,22 @@
 /* Reset and base */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Noto Sans', sans-serif; line-height: 1.6; background-color: var(--bg-color); color: var(--text-color); }
-a { text-decoration: none; color: var(--primary-color); }
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: 'Noto Sans', sans-serif; 
+  line-height: 1.6; 
+  background-color: var(--bg-color); 
+  color: var(--text-color); 
+}
+
+a { 
+  text-decoration: none; 
+  color: var(--primary-color); 
+}
+
 :root {
   /* Light Mode Colors */
   --bg-color: #ffffff;
@@ -113,12 +128,35 @@ body.dark .theme-toggle .moon {
 /******************************************************/
 
 /* Headings */
-h1,h2,h3 { margin-bottom: .5rem; margin-top: 1rem}
+h1,h2,h3 { 
+  margin-bottom: .5rem; 
+  margin-top: 1rem
+}
+
+/* Paragraphs */
+p { 
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
 
 /* Cards for case studies / artifacts */
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
-.card { border: 1px solid var(--card-border); padding: 1rem; border-radius: 8px; background: var(--card-bg); transition: transform 0.2s ease; }
-.card:hover { transform: translateY(-5px); }
+.cards { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 1rem; 
+  margin-top: 2rem; 
+}
+.card { 
+  border: 1px solid var(--card-border); 
+  padding: 1rem; 
+  border-radius: 8px; 
+  background: var(--card-bg); 
+  transition: transform 0.2s ease; 
+}
+.card:hover { 
+  transform: translateY(-5px); 
+}
 
 /* Resume iframe */
 iframe, object { width: 100%; height: 800px; border: 1px solid var(--card-border); }
@@ -133,8 +171,15 @@ iframe, object { width: 100%; height: 800px; border: 1px solid var(--card-border
   padding: 6rem 2rem; 
   text-align: center; 
 }
-.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-.hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero h1 { 
+  font-size: 2.5rem; 
+  margin-bottom: 1rem; }
+.hero p { 
+  font-size: 1.2rem; 
+  margin-bottom: 2rem; 
+  max-width: 600px; 
+  margin-left: auto; 
+  margin-right: auto; }
 .btn { 
   display: inline-block; 
   background: var(--btn-bg); 
