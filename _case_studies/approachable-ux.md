@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Approachable UX for Pro Video Editing Software
+permalink: /case-studies/approachable-ux/
 excerpt: I led a multi-cohort UX research study to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
 ---
 
