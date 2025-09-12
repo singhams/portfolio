@@ -113,7 +113,7 @@ body.dark .theme-toggle .moon {
 /******************************************************/
 
 /* Headings */
-h1,h2,h3 { margin-bottom: 1rem; }
+h1,h2,h3 { margin-bottom: .5rem; margin-top: 1rem}
 
 /* Cards for case studies / artifacts */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
@@ -128,7 +128,7 @@ iframe, object { width: 100%; height: 800px; border: 1px solid var(--card-border
 
 /* Hero section */
 .hero { 
-  background: var(--hero-bg); 
+  /*background: var(--hero-bg); */
   color: var(--hero-text); 
   padding: 6rem 2rem; 
   text-align: center; 
