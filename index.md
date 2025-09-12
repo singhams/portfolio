@@ -14,9 +14,9 @@ title: Home
 <div class="cards">
 {% for cs in site.case_studies %}
   <div class="card">
-    <a href="{{ cs.url }}">
+    <a href="{{ cs.url | relative_url }}">
       {% if cs.image %}
-      <img src="{{ cs.image }}" alt="{{ cs.title }} screenshot">
+      <img src="{{ cs.image | relative_url }}" alt="{{ cs.title }} screenshot">
       {% endif %}
       <h3>{{ cs.title }}</h3>
       {% if cs.excerpt %}
@@ -32,9 +32,9 @@ title: Home
 <div class="cards">
 {% for artifact in site.artifacts %}
   <div class="card">
-    <a href="{{ artifact.url }}">
+    <a href="{{ artifact.url | relative_url }}">
       {% if artifact.image %}
-      <img src="{{ artifact.image }}" alt="{{ artifact.title }} screenshot">
+      <img src="{{ artifact.image | relative_url }}" alt="{{ artifact.title }} screenshot">
       {% endif %}
       <h3>{{ artifact.title }}</h3>
       {% if artifact.excerpt %}
