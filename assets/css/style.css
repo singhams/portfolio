@@ -5,50 +5,47 @@ a { text-decoration: none; color: var(--primary-color); }
 :root {
   /* Light Mode Colors */
   --bg-color: #ffffff;
-  --text-color: #222222;
-  --primary-color: #6105E0;
-  --secondary-color: #1C1D46;
-  --heading-font: 'Nunito Sans', sans-serif;
-
-  --card-bg: #EDE5FF;
-  --card-border: #B798FF;
-  --hero-bg: var(--primary-color);
-  --hero-text: #6105E0;
-  --btn-bg: #EDE5FF;
-  --btn-text: var(--primary-color);
-  --btn-hover-bg: #B696FF;
-  --btn-hover-text: var(--primary-color);
-  --meta-text: #666666;
+  --text-color: #000000;
+  --primary-color: #289988;
+  --secondary-color: #E04852;
+  --card-bg: #E4E4E4;
+  --card-border: #E4E4E4;
+  --hero-bg: #E4E4E4;
+  --hero-text: #000000;
+  --btn-bg: #E04852;
+  --btn-text: #000000;
+  --btn-hover-bg: transparent;
+  --btn-hover-text: #E04852;
+  --meta-text: #E04852;
 }
 
 /* Dark mode overrides */
 body.dark-mode {
-  --bg-color: #0B0C2D;
-  --text-color: #e0e0e0;
-  --primary-color: #D8C6FF;
-  --secondary-color: #1f1f1f;
-
-  --card-bg: #100520;
-  --card-border: #333333;
-  --hero-bg: #6105E0;
-  --hero-text: #D8C6FF;
-  --btn-bg: #100520;
-  --btn-text: #ffffff;
-  --btn-hover-bg: #B696FF;
-  --btn-hover-text: #ffffff;
-  --meta-text: #F0F8FF;
+  --bg-color: #242424;
+  --text-color: #FFFFFF;
+  --primary-color: #5ECEBD;
+  --secondary-color: #FFACB1;
+  --card-bg: #323232;
+  --card-border: #323232;
+  --hero-bg: #323232;
+  --hero-text: #FFFFFF;
+  --btn-bg: #FFACB1;
+  --btn-text: #000000;
+  --btn-hover-bg: transparent;
+  --btn-hover-text: #FFACB1;
+  --meta-text: #FFACB1;
 }
 
 /* Container */
 .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
 
 /* Navigation */
-nav { background: var(--secondary-color); padding: 1rem; }
+nav { background: var(--card-bg); padding: 1rem; }
 nav ul { display: flex; gap: 1rem; list-style: none; }
 nav a { font-weight: bold; }
 
 /* Headings */
-h1,h2,h3 { font-family: var(--heading-font); margin-bottom: 1rem; }
+h1,h2,h3 { margin-bottom: 1rem; }
 
 /* Cards for case studies / artifacts */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 2rem; }
