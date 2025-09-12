@@ -39,10 +39,78 @@ body.dark-mode {
 /* Container */
 .container { max-width: 960px; margin: 0 auto; padding: 2rem; }
 
-/* Navigation */
-nav { background: var(--card-bg); padding: 1rem; }
-nav ul { display: flex; gap: 1rem; list-style: none; }
-nav a { font-weight: bold; }
+/* NAVIGATION */
+nav {
+  background: var(--secondary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+nav a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Active page highlight */
+nav a.active {
+  background: var(--primary-color);
+  color: #fff;
+  border: 2px solid var(--primary-color);
+}
+
+/* Keep theme toggle aligned */
+.theme-toggle {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle .icon {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+body.light .theme-toggle .sun {
+  display: none;
+}
+
+body.light .theme-toggle .moon {
+  display: block;
+}
+
+body.dark .theme-toggle .sun {
+  display: block;
+}
+
+body.dark .theme-toggle .moon {
+  display: none;
+}
+
 
 /* Headings */
 h1,h2,h3 { margin-bottom: 1rem; }
