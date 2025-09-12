@@ -7,11 +7,7 @@
       <li><a href="{{ '/artifacts' | relative_url }}" class="{% if page.url contains '/artifacts' %}active{% endif %}">Artifacts</a></li>
     </ul>
 
-    <button id="hamburger" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <button id="hamburger">☰</button>
 
     <button id="mode-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
       <svg class="icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -30,7 +26,6 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
   navMenu.classList.toggle('mobile-visible');
 });
 </script>
