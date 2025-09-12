@@ -4,8 +4,8 @@ title: Home
 ---
 
 <header class="hero">
-  <h1>Hi, I'm [Your Name]</h1>
-  <p>Designer & Developer. I create digital experiences that are fast, accessible, and visually striking.</p>
+  <h1>Sara Ingham</h1>
+  <p>UX researcher with experience in information architecture, taxonomy, ontology, and metadata modeling.</p>
   <a href="{{ '/resume' | relative_url }}" class="btn">View Resume</a>
 </header>
 
