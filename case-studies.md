@@ -8,9 +8,9 @@ permalink: /case-studies/
 <div class="cards">
 {% for cs in site.case_studies %}
   <div class="card">
-    <a href="{{ cs.url }}">
+    <a href="{{ cs.url | relative_url }}">
       {% if cs.image %}
-      <img src="{{ cs.image }}" alt="{{ cs.title }} screenshot">
+      <img src="{{ cs.image | relative_url }}" alt="{{ cs.title }} screenshot">
       {% endif %}
       <h3>{{ cs.title }}</h3>
       {% if cs.excerpt %}
