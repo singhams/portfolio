@@ -59,17 +59,16 @@ body.dark-mode {
 /* Navigation container */
 nav .nav-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Space between nav menu and toggle button */
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   position: relative;
   margin: 1rem;
 }
 
 /* Nav menu */
-nav ul {
+#nav-menu {
   display: flex;
-  justify-content: center;
   gap: 1.5rem;
   list-style: none;
   margin: 0;
@@ -78,24 +77,29 @@ nav ul {
 }
 
 /* Desktop: menu fully visible */
-#nav-menu {
-  display: flex;
-  gap: 1.5rem;
-  max-height: 1000px; /* ensures it’s always visible */
-  transition: max-height 0.3s ease;
+@media(min-width: 769px) {
+  #nav-menu {
+    flex-direction: row;
+    max-height: none;
+  }
 }
 
 /* Mobile: hide by default */
 @media(max-width: 768px) {
   #nav-menu {
     flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
     gap: 1rem;
     max-height: 0;
     overflow: hidden;
   }
 
   #nav-menu.mobile-visible {
-    max-height: 500px; /* enough to show all items */
+    max-height: 500px; /* Adjust for number of items */
+  }
+
+  #hamburger {
+    display: flex;
   }
 }
 
@@ -144,13 +148,12 @@ body.dark .theme-toggle .moon { display: none; }
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 30px; /* Increased size for better visibility */
+  height: 24px;
   border: none;
   background: none;
   cursor: pointer;
   padding: 0;
-  margin-left: 1rem;
 }
 
 #hamburger span {

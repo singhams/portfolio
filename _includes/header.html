@@ -1,13 +1,17 @@
 <nav>
   <div class="nav-container">
+    <button id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <ul id="nav-menu">
       <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
       <li><a href="{{ '/resume' | relative_url }}" class="{% if page.url contains '/resume' %}active{% endif %}">Resume</a></li>
       <li><a href="{{ '/case-studies' | relative_url }}" class="{% if page.url contains '/case-studies' %}active{% endif %}">Case Studies</a></li>
       <li><a href="{{ '/artifacts' | relative_url }}" class="{% if page.url contains '/artifacts' %}active{% endif %}">Artifacts</a></li>
     </ul>
-
-    <button id="hamburger">☰</button>
 
     <button id="mode-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
       <svg class="icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -27,5 +31,6 @@ const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
   navMenu.classList.toggle('mobile-visible');
+  hamburger.classList.toggle('active');
 });
 </script>
