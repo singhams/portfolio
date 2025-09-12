@@ -1,6 +1,7 @@
 ---
-layout: default
-title: "Approachable UX for Pro Video Editing Software"
+layout: page
+title: Approachable UX for Pro Video Editing Software
+excerpt: I led a multi-cohort UX research study to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
 ---
 
 # Approachable UX for Pro Video Editing Software
