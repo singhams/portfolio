@@ -58,6 +58,14 @@ body.dark-mode {
   padding: 2rem;
 }
 
+/* Center the footer content */
+footer {
+  text-align: center; /* Centers the text horizontally */
+  margin-top: 2rem; /* Optional: Adds spacing above the footer */
+  padding: 1rem; /* Optional: Adds padding inside the footer */
+  background-color: var(--card-bg); /* Optional: Adds a background color */
+}
+
 /*************** DESKTOP NAVIGATION ***********************/
 
 /* Navigation container */
@@ -376,6 +384,6 @@ iframe, object {
     max-height: 0;
   }
   main {
-    margin-top: 60px; /* Adjust this value to match the height of the mobile nav bar */
+    margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
   }
 }
