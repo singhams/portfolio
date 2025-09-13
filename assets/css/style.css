@@ -195,7 +195,7 @@ body.dark-mode .theme-toggle .moon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center the spans horizontally */
+    /* align-items: center; /* Center the spans horizontally */
     width: 30px;
     height: 24px;
     border: none;
@@ -216,13 +216,21 @@ body.dark-mode .theme-toggle .moon {
 
   /* Hamburger Animation When Active */
   #hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px); /* Adjusted for better alignment */
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%; /* Center the line vertically */
+    left: 0;
+    transform-origin: center; /* Rotate around the center */
   }
   #hamburger.active span:nth-child(2) {
     opacity: 0; /* Hide the middle bar */
   }
   #hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px); /* Adjusted for better alignment */
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%; /* Center the line vertically */
+  left: 0;
+  transform-origin: center; /* Rotate around the center */
   }
 
   /* Mobile Navigation Menu */
