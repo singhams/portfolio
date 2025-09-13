@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: artifacts
 title: Artifacts
 permalink: /artifacts/
 ---

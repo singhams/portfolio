@@ -34,7 +34,7 @@ a {
 /* Theme Variables */
 :root {
   /* Light Mode Colors */
-  --bg-color: #ffffff;
+  --bg-color: #ededed;
   --text-color: #000000;
   --primary-color: #289988;
   --secondary-color: #E04852;
@@ -51,7 +51,7 @@ a {
 
 body.dark-mode {
   --bg-color: #242424;
-  --text-color: #FFFFFF;
+  --text-color: #d3d3d3;
   --primary-color: #5ECEBD;
   --secondary-color: #FFACB1;
   --card-bg: #323232;
@@ -128,6 +128,13 @@ nav ul {
   justify-content: center;
   gap: 1.5rem;
   list-style: none;
+}
+
+/* No margin-bottom for nav lists */
+nav li,
+#nav-menu li,
+#mobile-nav-menu li {
+  margin-bottom: 0;
 }
 
 nav a {
@@ -323,6 +330,20 @@ p {
   color: var(--text-color);
 }
 
+ul, ol {
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Optional: Style list markers for better visibility */
+ul li::marker, ol li::marker {
+  color: var(--secondary-color);
+}
+
 /*************** COMPONENTS ***********************/
 
 /* Cards */
@@ -350,6 +371,7 @@ p {
   background: var(--btn-bg);
   color: var(--btn-text);
   padding: 0.8rem 1.5rem;
+  margin: 1rem;
   border-radius: 5px;
   font-weight: bold;
   transition: background 0.2s ease, color 0.2s ease;
@@ -357,6 +379,7 @@ p {
 
 .btn:hover {
   background: var(--btn-hover-bg);
+  border: 1px solid var(--btn-bg);
   color: var(--btn-hover-text);
 }
 
@@ -392,7 +415,7 @@ iframe, object {
 @media(max-width: 600px) {
   nav ul {
     flex-direction: column;
-    align-items: left;
+    
     gap: 0;
     max-height: 0;
   }

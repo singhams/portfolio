@@ -1,10 +1,10 @@
 ---
 layout: page
+tags: [UX Research, Usability Study]
 title: Approachable UX for Pro Video Editing Software
 excerpt: I led a multi-cohort UX research study to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
 ---
 
-# Approachable UX for Pro Video Editing Software
 **UX Research | Usability Study**  
 
 You can view the redacted findings report [here](#).
