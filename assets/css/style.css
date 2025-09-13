@@ -203,13 +203,11 @@ body.dark-mode .theme-toggle .moon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; /* Center the spans horizontally */
     width: 30px;
     height: 24px;
     border: none;
     background: none;
     cursor: pointer;
-    padding: 0;
     z-index: 1001; /* Ensure it stays above the nav menu */
   }
 
@@ -373,6 +371,10 @@ iframe, object {
   border: 1px solid var(--card-border);
 }
 
+.subpage main {
+  margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
+}
+
 /*************** RESPONSIVE ***********************/
 
 
@@ -385,5 +387,8 @@ iframe, object {
   }
   main {
     margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
+  }
+  .subpage main {
+    margin-top: 0; /* Adjust this value to match the height of the mobile nav bar */
   }
 }
