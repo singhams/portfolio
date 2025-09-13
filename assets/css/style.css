@@ -5,11 +5,25 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Noto Sans', sans-serif;
   line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+main {
+  flex: 1; /* Ensures main takes up available space */
+}
+
+.subpage main {
+  margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
 }
 
 a {
@@ -209,6 +223,7 @@ body.dark-mode .theme-toggle .moon {
     background: none;
     cursor: pointer;
     z-index: 1001; /* Ensure it stays above the nav menu */
+    position: relative;
   }
 
   #hamburger span {
@@ -369,10 +384,6 @@ iframe, object {
   width: 100%;
   height: 800px;
   border: 1px solid var(--card-border);
-}
-
-.subpage main {
-  margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
 }
 
 /*************** RESPONSIVE ***********************/
