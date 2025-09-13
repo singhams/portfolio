@@ -10,10 +10,17 @@ title: Home
   <a href="{{ '/resume' | relative_url }}" class="btn">View Resume</a>
 </header>
 
-<div class="wave-divider">
-<svg viewBox="0 0 1200 60" preserveAspectRatio="none" width="100%" height="60">
-  <path d="M0,30 Q300,60 600,30 T1200,30" fill="var(--accent-color)" stroke="var(--accent-color)" stroke-width="4"/>
-</svg>
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" width="100%" height="60" role="img" aria-hidden="true">
+    <!-- stroked, smooth double-curve; subtle (low opacity) -->
+    <path d="M0 30 C200 10 400 50 600 30 C800 10 1000 50 1200 30"
+          fill="none"
+          stroke="var(--primary-color)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-opacity="0.16" />
+  </svg>
 </div>
 
 ## Featured Case Studies

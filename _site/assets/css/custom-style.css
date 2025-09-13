@@ -35,7 +35,7 @@ a {
   --primary-color: #289988;
   --secondary-color: #E04852;
   --card-bg: #E4E4E4;
-  --card-border: #E4E4E4;
+  --card-border: #E04852;
   --hero-bg: #E4E4E4;
   --hero-text: #000000;
   --btn-bg: #E04852;
@@ -51,7 +51,7 @@ body.dark-mode {
   --primary-color: #5ECEBD;
   --secondary-color: #FFACB1;
   --card-bg: #323232;
-  --card-border: #323232;
+  --card-border: #FFACB1;
   --hero-bg: #323232;
   --hero-text: #FFFFFF;
   --btn-bg: #FFACB1;
@@ -179,7 +179,7 @@ footer .footer-content {
 .tag-pill {
   display: inline-block;
   background: var(--secondary-color);
-  color: #fff;
+  color: var(--btn-text);
   border: none;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
@@ -191,6 +191,7 @@ footer .footer-content {
 .tag-pill.active,
 .tag-pill:hover {
   background: var(--accent-color);
+  color: var(--btn-hover-text);
 }
 
 .hero h1, .hero h2, .hero p, .hero a {
@@ -216,11 +217,11 @@ body.dark-mode .btn,
 body.dark-mode nav .nav-container,
 body.dark-mode #nav-container,
 body.dark-mode #mobile-nav-container {
-  box-shadow: 0 2px 12px rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(186, 186, 186, 0.08);
 }
 body.dark-mode .card:hover,
 body.dark-mode .btn:hover {
-  box-shadow: 0 6px 24px rgba(255,255,255,0.16);
+  box-shadow: 0 6px 24px rgba(191, 191, 191, 0.16);
 }
 
 /*************** DESKTOP NAVIGATION ***********************/
@@ -233,7 +234,7 @@ nav .nav-container {
   position: relative;
   margin: 1rem;
   padding: .5rem;
-  border: 2px solid var(--card-bg);
+  border: 1px solid var(--card-bg);
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   border-radius: 100px;
 }
@@ -481,15 +482,9 @@ p {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: 1rem;
-  /* Prevent content from sticking to the top of the container */
+  margin-bottom: 2rem;
   width: 100%;
   box-sizing: border-box;
-  /* Optional: add horizontal padding if needed */
-  /* padding-left: 1rem;
-  padding-right: 1rem; */
-  /* Optional: add a max-width if you want to limit content width */
-  /* max-width: 800px;
-  margin: 0 auto; */
 }
 
 /* Only style lists in content */
@@ -508,11 +503,12 @@ p {
 
 .wave-divider {
   width: 100%;
-  overflow: hidden;
-  margin: 2rem 0;
+  overflow: visible; /* allow the curve to render cleanly */
+  margin: 1.5rem 0;  /* adjust vertical spacing as you like */
 }
 .wave-divider svg {
   display: block;
+  height: 48px;      /* tweak to taste */
 }
 
 /*************** COMPONENTS ***********************/
@@ -526,7 +522,6 @@ p {
 
 .card {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border: 1px solid var(--secondary-color);
   padding: 1rem;
   border-radius: 8px;
   background: var(--card-bg);
@@ -539,7 +534,7 @@ p {
 }
 
 .cards .card {
-  border: 2px solid var(--secondary-color);
+  border: 1px solid var(--card-border);
   border-image: linear-gradient(90deg, var(--secondary-color), var(--accent-color)) 1;
   transition: box-shadow 0.2s;
 }
