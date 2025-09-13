@@ -42,37 +42,3 @@
       </svg>
     </button>
 </nav>
-
-<script>
-const toggleBtn = document.getElementById('mode-toggle');
-const body = document.body;
-
-// Apply saved theme on page load
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  body.classList.toggle('dark-mode', savedTheme === 'dark');
-}
-
-// Add event listener for the toggle button
-toggleBtn.addEventListener('click', () => {
-  const isDarkMode = body.classList.toggle('dark-mode');
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-});
-
-const hamburger = document.getElementById('hamburger');
-const mobileNavContainer = document.getElementById('mobile-nav-container');
-const mobileNavMenu = document.getElementById('mobile-nav-menu');
-
-// Toggle mobile navigation visibility
-hamburger.addEventListener('click', () => {
-  mobileNavContainer.classList.toggle('mobile-visible');
-  hamburger.classList.toggle('active');
-
-  // Ensure the menu is hidden when not active
-  if (mobileNavContainer.classList.contains('mobile-visible')) {
-    mobileNavMenu.style.display = 'flex';
-  } else {
-    mobileNavMenu.style.display = 'none';
-  }
-});
-</script>
