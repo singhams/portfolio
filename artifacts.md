@@ -1,5 +1,5 @@
 ---
-layout: artifacts
+layout: gallery
 title: Artifacts
 permalink: /artifacts/
 ---

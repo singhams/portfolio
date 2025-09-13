@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: article
 title: Interactive Mobile App Prototype
 excerpt: A Figma prototype demonstrating UX flows for a mobile application.
 ---

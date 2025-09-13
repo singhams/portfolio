@@ -30,3 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const pills = document.querySelectorAll('.tag-pill');
+  const cards = document.querySelectorAll('.card');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', function() {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const tag = pill.getAttribute('data-tag');
+      cards.forEach(card => {
+        if (tag === 'all' || card.getAttribute('data-tags').includes(tag)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});

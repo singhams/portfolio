@@ -22,10 +22,6 @@ main {
   flex: 1; /* Ensures main takes up available space */
 }
 
-.subpage main {
-  margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
-}
-
 a {
   text-decoration: none;
   color: var(--primary-color);
@@ -72,12 +68,159 @@ body.dark-mode {
   padding: 2rem;
 }
 
-/* Center the footer content */
+/* ensure footer is the stacking context and leaves room for the wave */
 footer {
-  text-align: center; /* Centers the text horizontally */
-  margin-top: 2rem; /* Optional: Adds spacing above the footer */
-  padding: 1rem; /* Optional: Adds padding inside the footer */
-  background-color: var(--card-bg); /* Optional: Adds a background color */
+  position: relative;       /* required for absolute .footer-wave inside footer */
+  z-index: 0;
+  padding: 2rem 1rem 1rem; /* add half the wave height to top padding */
+  background-color: var(--card-bg);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Footer - social links */
+.footer-content .footer-links {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  color: var(--text-color);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: transform 0.12s ease, background 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+}
+
+.footer-links a svg {
+  width: 20px;
+  height: auto;            /* allow SVG to scale proportionally */
+  aspect-ratio: 1 / 1;     /* keeps it square in supporting browsers */
+  display: block;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  transform: translateY(-3px);
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background: rgba(0,0,0,0.03);
+  outline: none;
+}
+
+.footer-meta {
+  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--text-color) 70%, transparent);
+  margin-top: 0.25rem;
+}
+.footer-meta a { color: var(--primary-color); }
+
+/* ensure footer content sits above the wave */
+footer .footer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-wave {
+  position: absolute;
+  top: -80px;               /* pull the wave up to overlap the previous section */
+  left: 0;
+  width: 100%;
+  height: 80px;             /* control wave height */
+  overflow: visible;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.footer-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.breadcrumbs {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+  border: none;
+  padding: 0;
+  gap: 0;
+}
+
+.breadcrumbs a {
+  text-decoration: underline;
+  border: none;
+  padding: 0;
+  text-decoration-color: var(--secondary-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  font-weight: normal;
+}
+
+.breadcrumbs a:hover {
+  border: none;
+  font-weight: bold;
+  color: var(--accent-color); /* Optional: highlight color */
+}
+
+.tag-pills {
+  margin-bottom: 2rem;
+}
+.tag-pill {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.tag-pill.active,
+.tag-pill:hover {
+  background: var(--accent-color);
+}
+
+.hero h1, .hero h2, .hero p, .hero a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+.hero h1 { animation-delay: 0.1s; }
+.hero h2 { animation-delay: 0.3s; }
+.hero p  { animation-delay: 0.5s; }
+.hero a  { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode shadows */
+body.dark-mode .card,
+body.dark-mode .btn,
+body.dark-mode nav .nav-container,
+body.dark-mode #nav-container,
+body.dark-mode #mobile-nav-container {
+  box-shadow: 0 2px 12px rgba(255,255,255,0.08);
+}
+body.dark-mode .card:hover,
+body.dark-mode .btn:hover {
+  box-shadow: 0 6px 24px rgba(255,255,255,0.16);
 }
 
 /*************** DESKTOP NAVIGATION ***********************/
@@ -91,6 +234,7 @@ nav .nav-container {
   margin: 1rem;
   padding: .5rem;
   border: 2px solid var(--card-bg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   border-radius: 100px;
 }
 
@@ -102,6 +246,13 @@ nav .nav-container {
   margin: 0;
   padding: 0;
   transition: max-height 0.3s ease;
+}
+
+/* Hide mobile nav by default */
+#mobile-nav-container {
+  display: none;
+  height: 0;
+  overflow: hidden;
 }
 
 #mobile-nav-menu {
@@ -121,20 +272,6 @@ nav .nav-container {
   margin-top: 1rem;
   border: 2px solid var(--card-bg);
   border-radius: 100px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-/* No margin-bottom for nav lists */
-nav li,
-#nav-menu li,
-#mobile-nav-menu li {
-  margin-bottom: 0;
 }
 
 nav a {
@@ -206,17 +343,20 @@ body.dark-mode .theme-toggle .moon {
 
   /* Mobile Navigation Container */
   #mobile-nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Keeps hamburger and toggle separate */
+    align-items: center; /* Keeps hamburger and toggle aligned in the middle of the row */
+    justify-content: space-between; /* Keeps space between hamburger and toggle */
     position: fixed; /* Pin to the top of the viewport */
     top: 0;
     left: 0;
     width: 100%; /* Full width */
     background: var(--bg-color);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     padding: 0.5rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it appears above other elements */
+    height: auto;
+    overflow: visible;
   }
 
   /* Hamburger Button */
@@ -261,20 +401,24 @@ body.dark-mode .theme-toggle .moon {
   transform-origin: center; /* Rotate around the center */
   }
 
+  /* Show mobile nav menu when container has .active or .mobile-visible */
+  #mobile-nav-container.active #mobile-nav-menu,
+  #mobile-nav-container.mobile-visible #mobile-nav-menu {
+    display: flex;
+  }
+
   /* Mobile Navigation Menu */
   #mobile-nav-menu {
     display: none; /* Hidden by default */
     top: 60px; /* Adjust to position below the mobile nav bar */
     overflow-y: auto; /* Add scrolling if the menu exceeds the viewport height */
     max-height: calc(100vh - 60px); /* Prevent it from exceeding the viewport height */
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
     list-style: none;
     background: var(--bg-color);
+    flex-direction: column;
     position: absolute;
     top: 100%; /* Position below the mobile nav bar */
+    overflow-x: hidden;
     left: 0;
     width: 100%; /* Full width */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -288,20 +432,22 @@ body.dark-mode .theme-toggle .moon {
   #mobile-nav-menu a {
     display: block;
     width: 100%;
+    box-sizing: border-box;
     padding: 1rem;
     color: var(--text-color);
     text-align: left;
-    border-radius: 0;
     transition: background 0.3s ease;
   }
 
   #mobile-nav-menu a:hover {
     background: rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--secondary-color);
   }
 
   /* Show Mobile Navigation When Active */
   #mobile-nav-container.mobile-visible #mobile-nav-menu {
     display: flex;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
   }
 
   /* Mobile Theme Toggle */
@@ -330,18 +476,43 @@ p {
   color: var(--text-color);
 }
 
-ul, ol {
+/* General content container styles */
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  /* Prevent content from sticking to the top of the container */
+  width: 100%;
+  box-sizing: border-box;
+  /* Optional: add horizontal padding if needed */
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  /* Optional: add a max-width if you want to limit content width */
+  /* max-width: 800px;
+  margin: 0 auto; */
+}
+
+/* Only style lists in content */
+.content ul, .content ol {
   margin-left: 2rem;
   padding-left: 1rem;
 }
 
-li {
+.content li {
   margin-bottom: 0.5rem;
 }
 
-/* Optional: Style list markers for better visibility */
-ul li::marker, ol li::marker {
+.content ul li::marker, .content ol li::marker {
   color: var(--secondary-color);
+}
+
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+.wave-divider svg {
+  display: block;
 }
 
 /*************** COMPONENTS ***********************/
@@ -354,19 +525,31 @@ ul li::marker, ol li::marker {
 }
 
 .card {
-  border: 1px solid var(--card-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 1px solid var(--secondary-color);
   padding: 1rem;
   border-radius: 8px;
   background: var(--card-bg);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.cards .card {
+  border: 2px solid var(--secondary-color);
+  border-image: linear-gradient(90deg, var(--secondary-color), var(--accent-color)) 1;
+  transition: box-shadow 0.2s;
+}
+.cards .card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 /* Buttons */
 .btn {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   display: inline-block;
   background: var(--btn-bg);
   color: var(--btn-text);
@@ -374,19 +557,19 @@ ul li::marker, ol li::marker {
   margin: 1rem;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s;
 }
 
 .btn:hover {
   background: var(--btn-hover-bg);
   border: 1px solid var(--btn-bg);
   color: var(--btn-hover-text);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
 }
 
 /* Hero Section */
 .hero {
   color: var(--hero-text);
-  padding: 6rem 2rem;
   text-align: center;
 }
 
@@ -398,7 +581,6 @@ ul li::marker, ol li::marker {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -407,6 +589,13 @@ iframe, object {
   width: 100%;
   height: 800px;
   border: 1px solid var(--card-border);
+}
+
+/* Horizontal Rule - Divider in markdown */
+hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 2px solid var(--card-border);
 }
 
 /*************** RESPONSIVE ***********************/
