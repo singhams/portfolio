@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Theme Toggle
-  const toggleBtn = document.getElementById('mode-toggle');
+  const toggleBtns = [document.getElementById('mode-toggle'), document.getElementById('mobile-mode-toggle')];
   const body = document.body;
 
   // Apply saved theme on page load
@@ -9,13 +9,15 @@ document.addEventListener('DOMContentLoaded', () => {
     body.classList.toggle('dark-mode', savedTheme === 'dark');
   }
 
-  // Add event listener for the toggle button
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const isDarkMode = body.classList.toggle('dark-mode');
-      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    });
-  }
+  // Add event listeners for both theme toggle buttons
+  toggleBtns.forEach((btn) => {
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isDarkMode = body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      });
+    }
+  });
 
   // Hamburger Menu
   const hamburger = document.getElementById('hamburger');
