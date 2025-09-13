@@ -195,7 +195,7 @@ body.dark-mode .theme-toggle .moon {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; /* Center the spans horizontally */
+    align-items: center; /* Center the spans horizontally */
     width: 30px;
     height: 24px;
     border: none;
@@ -374,5 +374,8 @@ iframe, object {
     align-items: left;
     gap: 0;
     max-height: 0;
+  }
+  main {
+    margin-top: 60px; /* Adjust this value to match the height of the mobile nav bar */
   }
 }
