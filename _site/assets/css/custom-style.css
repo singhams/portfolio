@@ -265,6 +265,10 @@ body.dark-mode .btn:hover {
 /* Logo Carousel - on homepage */
 /**********************************************************************************/
 
+body.dark-mode .logo-gallery-wrapper {
+  display: none !important; /* hide in dark mode for now because the images are not optimized */
+}
+
 /* Logo gallery grid (static gallery, responsive) */
 .logo-gallery-wrapper {
   margin: 2rem 0;

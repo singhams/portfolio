@@ -3,7 +3,7 @@ layout: list
 title: Case Studies
 permalink: /case-studies/
 ---
-
+<!--
 {% assign all_tags = site.case_studies | map: "tags" | join: "," | split: "," | uniq %}
 <div class="tag-pills">
   <button class="tag-pill active" data-tag="all">All</button>
@@ -11,6 +11,7 @@ permalink: /case-studies/
     <button class="tag-pill" data-tag="{{ tag | strip }}">{{ tag | strip }}</button>
   {% endfor %}
 </div>
+-->
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
