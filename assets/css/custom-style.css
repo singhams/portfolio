@@ -8,8 +8,10 @@
 html, body {
   height: 100%;
 }
-
+/**********************************************************************************/
 /* Theme Variables */
+/**********************************************************************************/
+
 :root {
   /* Light Mode Colors */
   --bg-color: #ececec;
@@ -20,6 +22,8 @@ html, body {
   --secondary-color: #E04852;
   --card-bg: #E4E4E4;
   --card-border: #E04852;
+  --pill-bg: #E04852;
+  --pill-text: #000000;
   --hero-bg: #E4E4E4;
   --hero-text: #000000;
   --btn-bg: #E04852;
@@ -38,6 +42,8 @@ body.dark-mode {
   --secondary-color: #FFACB1;
   --card-bg: #0d0304;
   --card-border: #FFACB1;
+  --pill-bg: #1f423d;
+  --pill-text: #c1c1c1;
   --hero-bg: #323232;
   --hero-text: #FFFFFF;
   --btn-bg: #FFACB1;
@@ -47,6 +53,9 @@ body.dark-mode {
   --meta-text: #FFACB1;
 }
 
+/**********************************************************************************/
+/* Base Styles */
+/**********************************************************************************/
 
 body {
   display: flex;
@@ -73,13 +82,16 @@ a {
   color: var(--primary-color);
 }
 
-
 /* Containers */
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem;
 }
+
+/**********************************************************************************/
+/* Footer */
+/**********************************************************************************/
 
 /* ensure footer is the stacking context and leaves room for the wave */
 footer {
@@ -161,6 +173,10 @@ footer .footer-content {
   height: 100%;
 }
 
+/**********************************************************************************/
+/* Breadcrumbs - used on Case Studies and Artifacts landing pages */
+/**********************************************************************************/
+
 .breadcrumbs {
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
@@ -186,6 +202,10 @@ footer .footer-content {
   color: var(--accent-color); /* Optional: highlight color */
 }
 
+/**********************************************************************************/
+/* Tag Pills - used on Case Studies landing page */
+/**********************************************************************************/
+
 .tag-pills {
   margin-bottom: 2rem;
 }
@@ -206,6 +226,10 @@ footer .footer-content {
   background: var(--accent-color);
   color: var(--btn-hover-text);
 }
+
+/**********************************************************************************/
+/* Home hero - intro section */
+/**********************************************************************************/
 
 .hero h1, .hero h2, .hero p, .hero a {
   opacity: 0;
@@ -237,79 +261,59 @@ body.dark-mode .btn:hover {
   box-shadow: 0 6px 24px rgba(191, 191, 191, 0.16);
 }
 
-/***************Logo Carousel*********************/
-/*************************************************/
+/**********************************************************************************/
+/* Logo Carousel - on homepage */
+/**********************************************************************************/
 
-/* Logo carousel (homepage) */
-.logo-carousel-wrapper {
+/* Logo gallery grid (static gallery, responsive) */
+.logo-gallery-wrapper {
   margin: 2rem 0;
+  padding: 0 0.25rem;
 }
 
-.logo-carousel {
-  overflow: hidden;
-  width: 100%;
-}
-
-.logo-track {
-  display: flex;
-  gap: 1.25rem;
+.logo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
   align-items: center;
-  padding: 0.75rem 0;
-  will-change: transform, scroll-position;
-  scroll-behavior: smooth;
-  /* allow touch / mouse scroll */
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
+  padding: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent; /* light theme: transparent */
+  border-radius: 12px;
 }
 
-.logo {
-  flex: 0 0 auto;
-  scroll-snap-align: center;
+/* dark mode: give gallery a subtle card background for contrast */
+body.dark-mode .logo-gallery {
+  background: color-mix(in srgb, var(--card-bg) 82%, rgba(0,0,0,0.12));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+}
+
+/* each logo cell */
+.logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: clamp(90px, 12vw, 160px);
-  height: clamp(48px, 8vw, 80px);
-  padding: 0.35rem;
-  background: transparent;
+  padding: 0.5rem;
+  height: 80px;
   border-radius: 8px;
-  box-sizing: border-box;
+  background: transparent;
 }
 
-.logo img {
+/* scale on small screens */
+@media (max-width: 520px) {
+  .logo-item {
+    height: 56px;
+    padding: 0.35rem;
+  }
+}
+
+/* logo images */
+.logo-item img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   display: block;
-  filter: none; /* preserves original logo colors; adjust if you want monochrome */
-  opacity: 0.95;
-}
-
-/* subtle focus style for keyboard users */
-.logo:focus-within,
-.logo img:focus {
-  outline: 2px solid color-mix(in srgb, var(--primary-color) 35%, transparent);
-  outline-offset: 4px;
-}
-
-/* Hide scrollbar on chrome-like browsers but keep functionality */
-.logo-track::-webkit-scrollbar { height: 8px; }
-.logo-track::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--text-color) 12%, transparent);
-  border-radius: 999px;
-}
-
-/* Fully stacked / single column on small screens (keeps comfortable spacing) */
-@media (max-width: 520px) {
-  .logo-track {
-    gap: 0.75rem;
-    padding: 0.5rem 0;
-  }
-  .logo {
-    width: clamp(80px, 28vw, 120px);
-    height: clamp(40px, 16vw, 60px);
-  }
 }
 
 /* Hover visuals (no JS needed) */
@@ -404,44 +408,7 @@ body.resume-page .content .exp-item ol {
   margin-top: 0.5rem;
 }
 
-/* Responsive: collapse to single column on small screens — fully stacked */
-@media (max-width: 760px) {
-  body.resume-page main.container .content .exp-item {
-    grid-template-columns: 1fr;
-    align-items: start;
-  }
 
-  /* date becomes the first row, full width */
-  body.resume-page main.container .content .exp-item > .role-date {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: start;
-    max-width: none;
-    white-space: normal;
-    margin-bottom: 0.35rem;
-  }
-
-  /* company then role then content flow naturally below */
-  body.resume-page main.container .content .exp-item > h3.company {
-    grid-column: 1;
-    grid-row: 2;
-    display: block;
-    margin-bottom: 0.15rem;
-  }
-  body.resume-page main.container .content .exp-item > .role-title {
-    grid-column: 1;
-    grid-row: 3;
-    display: block;
-    margin-top: 0;
-  }
-
-  body.resume-page main.container .content .exp-item > p:not(.role-date):not(.role-title),
-  body.resume-page main.container .content .exp-item > ul,
-  body.resume-page main.container .content .exp-item > ol {
-    grid-column: 1;
-    margin-top: 0.5rem;
-  }
-}
 
 /* Resume skill pills (scoped to resume page) */
 body.resume-page .content .skill-list {
@@ -454,8 +421,8 @@ body.resume-page .content .skill-list {
 }
 
 body.resume-page .content .skill-list li {
-  background: var(--card-bg);
-  color: var(--text-color);
+  background: var(--pill-bg);
+  color: var(--pill-text);
   border: 1px solid color-mix(in srgb, var(--text-color) 8%, transparent);
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -512,6 +479,149 @@ body.resume-page .wave-divider--resume svg {
     height: 36px;
   }
 }
+
+/*************** ARTIFACTS GALLERY ***********************/
+
+/* Artifacts Gallery — Responsive Grid */
+.cards.artifacts-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+  padding: 0.25rem;
+  box-sizing: border-box;
+}
+
+.cards.artifacts-gallery .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.cards.artifacts-gallery .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.cards.artifacts-gallery .card-thumb {
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--card-bg) 94%, transparent);
+  margin-bottom: 0.5rem;
+}
+.cards.artifacts-gallery .card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cards.artifacts-gallery h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 1100px) {
+  .cards.artifacts-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile: 1 column, smaller thumbs */
+@media (max-width: 760px) {
+  .cards.artifacts-gallery {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  .cards.artifacts-gallery .card-thumb {
+    height: 140px;
+  }
+}
+
+/*************** CASE STUDIES ***********************/
+
+/* ---- Case studies list: force full-width rows with left thumbnail; stack on small screens ---- */
+/* Very specific selectors to avoid being overridden by generic .cards rules */
+main.container .cards.case-list,
+.cards.case-list {
+  display: block !important;
+  margin: 0;
+  padding: 0;
+}
+
+main.container .cards.case-list .case-item.card,
+.cards.case-list .case-item.card {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--text-color) 4%, transparent);
+}
+
+/* clickable area should mirror the flex layout */
+main.container .cards.case-list .case-link,
+.cards.case-list .case-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+/* thumbnail area */
+main.container .cards.case-list .card-thumb,
+.cards.case-list .card-thumb {
+  flex: 0 0 160px;
+  width: 160px;
+  height: 96px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+}
+main.container .cards.case-list .card-thumb img,
+.cards.case-list .card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* content area */
+main.container .cards.case-list .card-content,
+.cards.case-list .card-content {
+  flex: 1 1 auto;
+  min-width: 0; /* allow text wrapping inside flex */
+}
+
+/* Case Study thumbnails and hero image */
+/* Constrain images in article/content so they never exceed container */
+.content img,
+.article-hero {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* style for article hero */
+.article-hero-wrap { text-align: center; margin: 0 0 1rem 0; }
+.article-hero { border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
 
 /*************** DESKTOP NAVIGATION ***********************/
 
@@ -624,7 +734,198 @@ body.dark-mode .theme-toggle .moon {
   opacity: 0;
 }
 
-/* Mobile Navigation - visible at < 600px width*/
+
+  
+/*************** TYPOGRAPHY ***********************/
+
+h1, h2, h3 {
+  margin: 1rem 0 0.5rem;
+}
+
+h2 {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+/* General content container styles */
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Only style lists in content */
+.content ul, .content ol {
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+}
+
+.content ul li::marker, .content ol li::marker {
+  color: var(--secondary-color);
+}
+
+/******************* Wave Divider *********************/
+
+.wave-divider {
+  width: 100%;
+  overflow: visible; /* allow the curve to render cleanly */
+  margin: 1.5rem 0;  /* adjust vertical spacing as you like */
+}
+.wave-divider svg {
+  display: block;
+  height: 48px;      /* tweak to taste */
+}
+
+body:not(.subpage) .wave-divider {
+  margin: 3.5rem 0;
+}
+
+/* Slightly tighter on small screens */
+@media (max-width: 760px) {
+  body:not(.subpage) .wave-divider {
+    margin: 2rem 0;
+  }
+}
+
+/*************** COMPONENTS ***********************/
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--card-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+
+.cards .card {
+  /*border: 1px solid var(--card-border); */
+  border-image: linear-gradient(90deg, var(--secondary-color), var(--accent-color)) 1;
+  transition: box-shadow 0.2s;
+}
+.cards .card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Buttons */
+.btn {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.8rem 1.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s;
+}
+
+.btn:hover {
+  background: var(--btn-hover-bg);
+  border: 1px solid var(--btn-bg);
+  color: var(--btn-hover-text);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+/* Hero Section */
+.hero {
+  color: var(--hero-text);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+}
+
+/* Resume iframe */
+iframe, object {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--card-border);
+}
+
+/* Horizontal Rule - Divider in markdown */
+hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 2px solid var(--card-border);
+}
+
+/**********************************************************************************/
+/*************** RESPONSIVE ***********************/
+/**********************************************************************************/
+
+@media(max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    
+    gap: 0;
+    max-height: 0;
+  }
+  main {
+    margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
+  }
+  .subpage main {
+    margin-top: 0; /* Adjust this value to match the height of the mobile nav bar */
+  }
+}
+
+@media (max-width: 760px) {
+  html, body {
+    overflow-x: hidden; /* hides any page-level overflow */
+  }
+
+  /* ensure top-level container doesn't exceed viewport */
+  main.container,
+  .container {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* images and media scale down */
+  img, video, .logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/**********************************************************************************/
+/* MOBILE-NAV - Visible at < 600px width */
+/**********************************************************************************/
+
 @media (max-width: 600px) {
   /* Hide the desktop navigation */
   #nav-container {
@@ -754,153 +1055,45 @@ body.dark-mode .theme-toggle .moon {
     transition: background 0.3s ease;
   }
 }
-  
-/*************** TYPOGRAPHY ***********************/
 
-h1, h2, h3 {
-  margin: 1rem 0 0.5rem;
-}
+/**********************************************************************************/
+/* RESUME - Responsive: collapse to single column on small screens — fully stacked */
+/**********************************************************************************/
 
-h2 {
-  color: var(--secondary-color);
-}
-
-p {
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
-/* General content container styles */
-.content {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Only style lists in content */
-.content ul, .content ol {
-  margin-left: 2rem;
-  padding-left: 1rem;
-}
-
-.content li {
-  margin-bottom: 0.5rem;
-}
-
-.content ul li::marker, .content ol li::marker {
-  color: var(--secondary-color);
-}
-
-.wave-divider {
-  width: 100%;
-  overflow: visible; /* allow the curve to render cleanly */
-  margin: 1.5rem 0;  /* adjust vertical spacing as you like */
-}
-.wave-divider svg {
-  display: block;
-  height: 48px;      /* tweak to taste */
-}
-
-/*************** COMPONENTS ***********************/
-
-/* Cards */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  padding: 1rem;
-  border-radius: 8px;
-  background: var(--card-bg);
-  transition: transform 0.2s ease, box-shadow 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-}
-
-.cards .card {
-  border: 1px solid var(--card-border);
-  border-image: linear-gradient(90deg, var(--secondary-color), var(--accent-color)) 1;
-  transition: box-shadow 0.2s;
-}
-.cards .card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-
-/* Buttons */
-.btn {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  display: inline-block;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  padding: 0.8rem 1.5rem;
-  margin: 1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s;
-}
-
-.btn:hover {
-  background: var(--btn-hover-bg);
-  border: 1px solid var(--btn-bg);
-  color: var(--btn-hover-text);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
-}
-
-/* Hero Section */
-.hero {
-  color: var(--hero-text);
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  margin: 0 auto;
-}
-
-/* Resume iframe */
-iframe, object {
-  width: 100%;
-  height: 800px;
-  border: 1px solid var(--card-border);
-}
-
-/* Horizontal Rule - Divider in markdown */
-hr {
-  margin: 2.5rem 0;
-  border: none;
-  border-top: 2px solid var(--card-border);
-}
-
-/*************** RESPONSIVE ***********************/
-
-
-@media(max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    
-    gap: 0;
-    max-height: 0;
+@media (max-width: 760px) {
+  body.resume-page main.container .content .exp-item {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
-  main {
-    margin-top: 3rem; /* Adjust this value to match the height of the mobile nav bar */
+
+  /* date becomes the first row, full width */
+  body.resume-page main.container .content .exp-item > .role-date {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    max-width: none;
+    white-space: normal;
+    margin-bottom: 0.35rem;
   }
-  .subpage main {
-    margin-top: 0; /* Adjust this value to match the height of the mobile nav bar */
+
+  /* company then role then content flow naturally below */
+  body.resume-page main.container .content .exp-item > h3.company {
+    grid-column: 1;
+    grid-row: 2;
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+  body.resume-page main.container .content .exp-item > .role-title {
+    grid-column: 1;
+    grid-row: 3;
+    display: block;
+    margin-top: 0;
+  }
+
+  body.resume-page main.container .content .exp-item > p:not(.role-date):not(.role-title),
+  body.resume-page main.container .content .exp-item > ul,
+  body.resume-page main.container .content .exp-item > ol {
+    grid-column: 1;
+    margin-top: 0.5rem;
   }
 }
-

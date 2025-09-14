@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ========== Tag pills (cards filtering) ========== */
   (function initTagPills() {
     const pills = Array.from(document.querySelectorAll('.tag-pill'));
-    const cards = Array.from(document.querySelectorAll('.card'));
+    const cards = Array.from(document.querySelectorAll('.case-item.card'));
     if (!pills.length || !cards.length) return;
 
     function filterBy(tag) {
       cards.forEach(card => {
         const tags = (card.getAttribute('data-tags') || '').split(',').map(s => s.trim());
-        card.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
+        card.hidden = !(tag === 'all' || tags.includes(tag));
       });
     }
 
@@ -58,68 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const active = pills.find(p => p.classList.contains('active')) || pills.find(p => p.getAttribute('data-tag') === 'all');
     if (active) active.click();
   })();
-
-  /* ========== Logo carousel (smooth, loop, pause on hover/focus) ========== */
-  (function initLogoCarousel() {
-    const track = document.querySelector('.logo-track');
-    if (!track) return;
-
-    // Ensure there's enough content to scroll by cloning nodes if needed
-    function ensureScrollable(t) {
-      const maxAttempts = 8;
-      let attempts = 0;
-      while (t.scrollWidth <= t.clientWidth * 1.1 && attempts < maxAttempts) {
-        const clones = Array.from(t.children).map(c => c.cloneNode(true));
-        clones.forEach(c => t.appendChild(c));
-        attempts++;
-      }
-    }
-
-    ensureScrollable(track);
-
-    // RAF-based continuous scroll
-    let rafId = null;
-    let paused = false;
-    const speed = 0.45; // px per frame (tweak as desired)
-
-    function step() {
-      if (!paused) {
-        track.scrollLeft += speed;
-        // Wrap smoothly when near the end
-        if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 1) {
-          track.scrollLeft = 0;
-        }
-      }
-      rafId = requestAnimationFrame(step);
-    }
-
-    function start() {
-      if (!rafId) rafId = requestAnimationFrame(step);
-    }
-    function stop() {
-      if (rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-      }
-    }
-
-    // Pause on pointer enter / focus, resume on leave / blur
-    track.addEventListener('mouseenter', () => { paused = true; }, { passive: true });
-    track.addEventListener('mouseleave', () => { paused = false; }, { passive: true });
-    track.addEventListener('focusin', () => { paused = true; });
-    track.addEventListener('focusout', () => { paused = false; });
-
-    // Pause while user is actively interacting (touch / pointer)
-    track.addEventListener('pointerdown', () => { paused = true; }, { passive: true });
-    track.addEventListener('pointerup', () => { paused = false; }, { passive: true });
-
-    // Visibility: pause when tab not visible
-    document.addEventListener('visibilitychange', () => {
-      paused = document.hidden ? true : paused;
-      if (!document.hidden) { /* do nothing, let mouse/focus control resume */ }
-    });
-
-    // Start loop
-    start();
-  })();
 });
+
+  

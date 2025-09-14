@@ -14,16 +14,12 @@
 
   <main class="container">
     <div class="content">
-      <nav class="breadcrumbs">
-        {% if page.collection == "case_studies" or page.url contains "/case-studies/" %}
-          <a href="{{ '/case-studies/' | relative_url }}">Case Studies</a>
-        {% elsif page.collection == "artifacts" or page.url contains "/artifacts/" %}
+      {% unless page.url == '/artifacts/' %}
+        <nav class="breadcrumbs">
           <a href="{{ '/artifacts/' | relative_url }}">Artifacts</a>
-        {% endif %}
-        {% if page.title %}
           &nbsp;›&nbsp; <span>{{ page.title }}</span>
-        {% endif %}
-      </nav>
+        </nav>
+      {% endunless %}
       <h1>{{ page.title }}</h1>
       {{ content }}
     </div>
@@ -32,6 +28,5 @@
   {% include footer.html %}
 
   <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
-
 </body>
 </html>
