@@ -14,7 +14,7 @@ Number of artifacts: {{ site.artifacts.size }}
 </div>
 
 <div class="cards artifacts-gallery">
-  <p>A curated selection of work spanning research, strategy, and visual design...</p>
+  <p>A curated selection of work spanning research, strategy, and visual design. From dashboards and user flows to illustrations and branding, these artifacts showcase the systems, experiences, and stories I create to help people and teams make sense of complex information. </p>
   {% assign sorted_artifacts = site.artifacts | sort: "order" %}
   {% for artifact in sorted_artifacts %}
     <div class="card {% if artifact.featured %}featured{% endif %}">
