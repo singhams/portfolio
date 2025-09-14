@@ -41,3 +41,18 @@ title: Home
 {% endfor %}
 </div>
 
+<!-- Logo carousel: sources images from assets/images/client-logos -->
+<div class="wave-divider" aria-hidden="true">{% include wave-divider.html %}</div>
+
+<section aria-label="Client logos" class="logo-carousel-wrapper">
+  <div class="logo-carousel" role="list" aria-live="off">
+    <div class="logo-track">
+      {% assign logos = site.static_files | where_exp: "f", "f.path contains 'assets/images/client-logos'" | sort: 'path' %}
+      {% for f in logos %}
+        <div class="logo" role="listitem">
+          <img src="{{ f.path | relative_url }}" alt="{{ f.name | split:'.' | first | replace:'-',' ' }}" loading="lazy">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
