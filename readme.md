@@ -1,23 +1,35 @@
-# Sara Ingham — Portfolio
+# Sara Ingham's Portfolio
 
-This repository contains the source for my personal portfolio website built with Jekyll and hosted on GitHub Pages.
+A clean, responsive portfolio website showcasing my UX research and information architecture work. Built with Jekyll and hosted on GitHub Pages.
 
-Live demo: https://singhams.github.io/portfolio (replace with actual URL)
+🔗 [View Live Site](https://singhams.github.io/portfolio)
 
-## Features
-- Responsive portfolio and blog layout
-- Custom wave footer and inline SVG social icons
-- Dark / light theme toggle
-- Easy to customize content via Markdown and Jekyll includes
+## 🌟 Features
 
-## Tech
-- Jekyll
-- GitHub Pages
-- HTML, CSS, Liquid templates
-- Docker (for local development)
+- Responsive portfolio layout with case studies and artifacts
+- Custom wave divider animations and SVG social icons
+- Dark/light theme toggle
+- Client logo carousel
+- Markdown-based content management
+- PDF resume downloads
+- Optimized image processing pipeline
 
-## Local development (using Docker)
-From the repository root run:
+## 🛠️ Technology Stack
+
+- Jekyll static site generator
+- GitHub Pages hosting
+- HTML5 & CSS3
+- Liquid templating
+- Python scripts for content preprocessing
+- Docker for local development
+
+## 💻 Local Development
+
+Prerequisites:
+- Docker
+- Git
+
+Run the site locally:
 
 ```bash
 docker run --rm \
@@ -28,32 +40,37 @@ docker run --rm \
   jekyll serve --livereload --host 0.0.0.0
 ```
 
-Open http://127.0.0.1:4000 in your browser.
+Visit `http://127.0.0.1:4000` in your browser. Changes to source files will auto-reload.
 
-Notes:
-- The container mounts the repo into /srv/jekyll so changes are reflected immediately.
-- If your site uses additional gems declared in a Gemfile, run:
-  docker run --rm -it --volume="$PWD:/srv/jekyll" --workdir=/srv/jekyll jekyll/jekyll:latest bash -lc "bundle install"
+### Installing Dependencies
 
-## Deploy
-This site is intended to be deployed on GitHub Pages. Push changes to the repository — Pages will build automatically (or use GitHub Actions if configured).
+If you modify the Gemfile, run:
 
-## Contributing
-No one needs to contribute, but I'm welcome to comments. If people want to copy and start their own that's fine. I'm just sharing for fun.
+```bash
+docker run --rm -it \
+  --volume="$PWD:/srv/jekyll" \
+  --workdir=/srv/jekyll \
+  jekyll/jekyll:latest \
+  bash -lc "bundle install"
+```
 
-If you do open-source this project, consider adding a LICENSE (MIT is common).
+## 🚀 Deployment
 
-## License
-If you open-source this repo, add a LICENSE file. Example: MIT License.
+This site deploys automatically to GitHub Pages when changes are pushed to the main branch.
 
-## Contact
-- Email: sara.ingham@gmail.com
-- LinkedIn: https://www.linkedin.com/in/sara-i-58a9025/
-- GitHub: https://github.com/singhams
+## 📄 License
 
-## Acknowledgements
-- Built with Jekyll and hosted on GitHub Pages
-- UI icons: inline SVG (Bootstrap icons used)
-- AI‑assisted by GitHub Copilot
-```<!-- filepath: /Users/saraingham/portfolio/README.md -->
-# Sara Ingham — Portfolio
+This project is shared for reference. You're welcome to use it as inspiration for your own portfolio, but please create your own content and design.
+
+## 📬 Contact
+
+- Email: sara.ingham@gmail.com 
+- LinkedIn: [Sara Ingham](https://www.linkedin.com/in/sara-i-58a9025/)
+- GitHub: [@singhams](https://github.com/singhams)
+
+## ✨ Acknowledgements
+
+- Built with [Jekyll](https://jekyllrb.com/)
+- Hosted on [GitHub Pages](https://pages.github.com/)
+- Icons from [Bootstrap Icons](https://icons.getbootstrap.com/)
+- AI assistance from GitHub Copilot
