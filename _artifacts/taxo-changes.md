@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Taxonomy Changes
+title: Infographic
 image: /assets/images/artifacts/taxonomy-changes.jpg
 ---
 

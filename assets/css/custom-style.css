@@ -485,7 +485,7 @@ body.resume-page .wave-divider--resume svg {
 /* Artifacts Gallery — Responsive Grid */
 .cards.artifacts-gallery {
   display: grid !important;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   align-items: start;
   padding: 0.25rem;

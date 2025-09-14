@@ -5,7 +5,7 @@ title: Home
 
 <header class="hero">
   <h1>Sara Ingham</h1>
-  <h2>UX researcher with experience in information architecture, taxonomy, ontology, and metadata modeling.</h2>
+  <h2>UX researcher with experience in information architecture.</h2>
   <p>I specialize in uncovering insights that improve the usability and governance of complex, data-rich systems. I’ve led end-to-end research for organizations like Adobe and Intel, bridging technical and business perspectives to help teams focus on what truly matters and act on it with the right evidence.</p>
   <a href="{{ '/resume' | relative_url }}" class="btn">View Resume</a>
 </header>
