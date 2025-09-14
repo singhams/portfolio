@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-<p><a href="{{ '/assets/docs/resume.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a></p>
+<p><a href="{{ '/assets/docs/Sara-Ingham-Resume-2025-September.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a></p>
 
 # Sara Ingham
 UX Researcher | Information Architect | Systems Analyst
