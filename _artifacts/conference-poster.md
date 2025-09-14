@@ -1,9 +1,12 @@
 ---
 layout: article
-title: Content Ecosystem Diagram
-image: /assets/images/artifacts/conference-poster.png
+title: "Conference Poster"
+image: "/assets/images/artifacts/thumb/conference-poster.webp"
+order: 15
+featured: false
 ---
+
 
 Collaborating with colleagues at Factor, I helped develop this maturity model, then designed the accompanying poster and presented it at the 2020 IA Conference.
 
-![Content ecosystem diagram]({{ '/assets/images/artifacts/conference-poster.png' | relative_url }})
+![Content ecosystem diagram]({{ '/assets/images/artifacts/full/conference-poster.webp' | relative_url }})

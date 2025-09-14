@@ -1,0 +1,165 @@
+---
+- layout: article
+  title: Content Auditing Dashboard
+  image: /assets/images/artifacts/thumb/specific-tag-cropped.webp
+  order: 1
+  featured: true
+  content: "|\n  These gifs show portions of a content auditing dashboard prototype\
+    \ I created using Amazon Quicksight. The dashboard allows you to search for content\
+    \ based on taxonomy tags as well as terms that appear in the content URL. It’s\
+    \ intended to help strategists find gaps and inconsistencies in their catalog,\
+    \ so they can be corrected. \n  \n  ![Dashboard search 1]({{ '/assets/images/artifacts/originals//assets/images/artifacts/full/specific-tag-cropped.webp'\
+    \ | relative_url }})\n  \n  ![Dashboard search 2]({{ '/assets/images/artifacts/originals/search-cropped.gif'\
+    \ | relative_url }})\n  \n  ![Dashboard search 3]({{ '/assets/images/artifacts/originals/trends-cropped.gif'\
+    \ | relative_url }})"
+- layout: article
+  title: Navigation Model
+  image: /assets/images/artifacts/thumb/nav-model.webp
+  order: 2
+  featured: true
+  content: "|\n  This diagram maps the pathways a user might take to find a specific\
+    \ product on Funko.com. In this scenario, Jill wants to discover Hermione Granger\
+    \ figurines but isn’t sure how to spell her name. She can search using terms like\
+    \ ‘Harry Potter’ or browse through characters or product categories. The flow\
+    \ highlights her journey and shows how different navigation options support findability\
+    \ and discovery. \n  \n  ![Navigation model diagram]({{ '/assets/images/artifacts/full/nav-model.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Ontology Model
+  image: /assets/images/artifacts/thumb/ontology.webp
+  order: 3
+  featured: true
+  content: "|\n  A high-level diagram mapping the core classes and relationships in\
+    \ our client’s Help & Learn content domain. I built the model in RDF, hand-coding\
+    \ it in Turtle (TTL) within VS Code, and then configured it in TopBraid as a proof\
+    \ of concept.\n  \n  ![Pickpen]({{ '/assets/images/artifacts/full/ontology.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Personas
+  image: /assets/images/artifacts/thumb/Persona-sam.webp
+  order: 4
+  featured: true
+  content: "|\n  You can read more about the research behind these personas [here]({{\
+    \ '/case-studies/research-led-metadata/' | relative_url }}).\n  \n  ![Persona\
+    \ 1]({{ '/assets/images/artifacts/full/Persona-alan.webp' | relative_url }})\n\
+    \  \n  ![Persona 2]({{ '/assets/images/artifacts/full/Persona-sam.webp' | relative_url\
+    \ }})"
+- layout: article
+  title: Infographic
+  image: /assets/images/artifacts/thumb/PickPen.webp
+  order: 5
+  featured: false
+  content: "|\n  I created this illustration using Adobe Illustrator to help explain\
+    \ how the PickPen works. \n  \n  ![Pickpen]({{ '/assets/images/artifacts/full/PickPen.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Content Pipelines
+  image: /assets/images/artifacts/thumb/pipelines.webp
+  order: 6
+  featured: true
+  content: "|\n  A high-level system diagram proposing a new architecture for a client’s\
+    \ content pipelines—supporting both an LLM-based chatbot and a traditional search/filter\
+    \ experience for help content.\n  \n  The design shifts tagging away from individual\
+    \ authoring platforms (e.g., WordPress) to PoolParty as the central “semantic\
+    \ layer” for taxonomy and metadata management, while introducing a more robust\
+    \ automated tagging capability.\n  \n  ![Pipelines diagram]({{ '/assets/images/artifacts/full/pipelines.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Journey Map
+  image: /assets/images/artifacts/thumb/journey.webp
+  order: 7
+  featured: false
+  content: "|\n  This journey map illustrates a typical travel planner’s process —\
+    \ from deciding where to go, to choosing accommodations, to planning activities.\
+    \ The high-level phases originated from earlier research and were refined based\
+    \ on findings from a user study I led.\n  \n  Unlike a standard journey map, this\
+    \ artifact layers in travelers’ specific information needs at each stage. These\
+    \ needs are especially critical during the mid-journey “research and planning”\
+    \ phases, where our client’s travel app competes head-to-head with other tools.\
+    \ Mapping these needs directly to the journey highlights exactly where the design\
+    \ must deliver clear, relevant, and differentiating content to win engagement.\n\
+    \  \n  ![Journey map]({{ '/assets/images/artifacts/full/journey.webp' | relative_url\
+    \ }})"
+- layout: article
+  title: Wireframes
+  image: /assets/images/artifacts/thumb/wire-after-a.webp
+  order: 8
+  featured: false
+  content: "|\n  Slides from a findings & recommendations report\n  \n  I recommended\
+    \ redesigning intranet page layouts so different page types would have distinct\
+    \ visual structures, helping users quickly recognize where they were and what\
+    \ to expect.  \n  \n  **Slide 1**: A current-state example with annotated pain\
+    \ points, including a call for layout differentiation. \n  \n  ![Annotations]({{\
+    \ '/assets/images/artifacts/full/wire-before-a.webp' | relative_url }})\n  \n\
+    \  **Slide 2**: Wireframes for three page types, illustrating how consistent design\
+    \ cues could signal each page’s meaning and purpose.\n  \n  ![Wireframes]({{ '/assets/images/artifacts/full/wire-after-a.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Taxonomy Flows
+  image: /assets/images/artifacts/thumb/taxo-flows.webp
+  order: 9
+  featured: false
+  content: "|\n  This diagram maps where enterprise taxonomy data is stored and how\
+    \ it flows between systems. It’s a simplified, redacted version of a comprehensive\
+    \ diagram developed for a client. The original was the product of a collaborative\
+    \ team effort to uncover and document the complex connections between enterprise\
+    \ taxonomies and the systems that rely on them.\n  \n  ![Taxonomy flows diagram]({{\
+    \ '/assets/images/full/artifacts/taxo-flows.webp' | relative_url }})"
+- layout: article
+  title: User Flows
+  image: /assets/images/artifacts/thumb/user-flow-1.webp
+  order: 10
+  featured: false
+  content: "|\n  I created these wireframes and user flows to illustrate different\
+    \ search scenarios for the Trover app, and how different elements of the information\
+    \ model we developed could be used.\n  \n  ![User flows diagram 1]({{ '/assets/images/artifacts/full/user-flow-1.webp'\
+    \ | relative_url }})\n  \n  ![User flows diagram 2]({{ '/assets/images/artifacts/full/user-flow-2.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Infographic
+  image: /assets/images/artifacts/thumb/taxonomy-changes.webp
+  order: 11
+  featured: false
+  content: "|\n  This infographic explains common taxonomy changes that must be planned\
+    \ for. My colleague, Bob, wrote a [blog post](https://factorfirm.com/posts/a-taxonomy-of-taxonomy-governance/)\
+    \ to accompany this diagram.\n  \n  ![Taxonomy changes infographic]({{ '/assets/images/artifacts/full/taxonomy-changes.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Presentation
+  image: /assets/images/artifacts/thumb/slide.webp
+  order: 12
+  featured: false
+  content: "|\n  In 2023, I co-presented this deck with Jennifer Long at the Taxonomy\
+    \ Bootcamp conference. I was responsible for designing the deck and developing\
+    \ most of its content.\n  \n  <a href=\"{{ '/assets/docs/presentation.pdf' | relative_url\
+    \ }}\" target=\"_blank\" rel=\"noopener noreferrer\">View full presentation (PDF)</a>.\n\
+    \  \n  ![Example slide]({{ '/assets/images/artifacts/full/slide.webp' | relative_url\
+    \ }})"
+- layout: article
+  title: Brand/logo Design
+  image: /assets/images/artifacts/thumb/Styles.webp
+  order: 13
+  featured: false
+  content: "|\n  This is a logo and style guide I designed for my husband’s vending\
+    \ machine company.\n  \n  ![Brand/logo style guide]({{ '/assets/images/artifacts/full/Styles.webp'\
+    \ | relative_url }})"
+- layout: article
+  title: Content Ecosystem Diagram
+  image: /assets/images/artifacts/thumb/topology.webp
+  order: 14
+  featured: false
+  content: "|\n  An early iteration of what became a living set of content architecture\
+    \ diagrams for a long-term client. With each new project, we refined our understanding\
+    \ of the underlying systems, captured changes in the architecture, and maintained\
+    \ an up-to-date version. These diagrams became essential for onboarding new team\
+    \ members, aligning stakeholders, and scoping future work. \n  \n  ![Content ecosystem\
+    \ diagram]({{ '/assets/images/artifacts/full/topology.webp' | relative_url }})"
+- layout: article
+  title: Conference Poster
+  image: /assets/images/artifacts/thumb/conference-poster.webp
+  order: 15
+  featured: false
+  content: "|\n  Collaborating with colleagues at Factor, I helped develop this maturity\
+    \ model, then designed the accompanying poster and presented it at the 2020 IA\
+    \ Conference.\n  \n  ![Content ecosystem diagram]({{ '/assets/images/artifacts/full/conference-poster.webp'\
+    \ | relative_url }})"

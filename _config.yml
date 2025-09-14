@@ -9,4 +9,4 @@ collections:
     permalink: /case-studies/:name/
   artifacts:
     output: true
-    permalink: /artifacts/:name/
+    permalink: /artifacts/:title/

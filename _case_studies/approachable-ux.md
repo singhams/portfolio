@@ -3,7 +3,7 @@ layout: article
 tags: [UX Research, Usability Study]
 title: Approachable UX for Pro Video Editing Software
 excerpt: I led a multi-cohort UX research study to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
-image: /assets/images/artifacts/approachable.png
+image: /assets/images/artifacts/thumb/approachable.webp
 ---
 
 You can view the redacted findings report: <a href="{{ '/assets/docs/findings-redacted.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">View redacted findings report (PDF)</a>.

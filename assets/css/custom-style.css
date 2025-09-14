@@ -329,6 +329,7 @@ body.resume-page .content .exp-item h3.company > a:hover {
   transform: translateY(-2px);
 }
 
+/*************************************************/
 /***************Resume****************************/
 /*************************************************/
 
@@ -483,8 +484,9 @@ body.resume-page .wave-divider--resume svg {
     height: 36px;
   }
 }
-
+/*************************************************/
 /*************** ARTIFACTS GALLERY ***********************/
+/*************************************************/
 
 /* Artifacts Gallery — Responsive Grid */
 .cards.artifacts-gallery {
@@ -552,21 +554,23 @@ body.resume-page .wave-divider--resume svg {
   }
 }
 
-/*************** CASE STUDIES ***********************/
+/*************************************************/
+/*************** CASE STUDIES List Page ***********************/
+/*************************************************/
 
-/* ---- Case studies list: force full-width rows with left thumbnail; stack on small screens ---- */
-/* Very specific selectors to avoid being overridden by generic .cards rules */
-main.container .cards.case-list,
+/* Case studies list: full-width rows with left thumbnail; stack on mobile */
 .cards.case-list {
-  display: block !important;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-main.container .cards.case-list .case-item.card,
 .cards.case-list .case-item.card {
-  width: 100%;
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1rem;
@@ -576,10 +580,12 @@ main.container .cards.case-list .case-item.card,
   border-radius: 8px;
   background: transparent;
   border: 1px solid color-mix(in srgb, var(--text-color) 4%, transparent);
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
 }
 
-/* clickable area should mirror the flex layout */
-main.container .cards.case-list .case-link,
 .cards.case-list .case-link {
   display: flex;
   align-items: center;
@@ -589,8 +595,6 @@ main.container .cards.case-list .case-link,
   width: 100%;
 }
 
-/* thumbnail area */
-main.container .cards.case-list .card-thumb,
 .cards.case-list .card-thumb {
   flex: 0 0 160px;
   width: 160px;
@@ -598,8 +602,11 @@ main.container .cards.case-list .card-thumb,
   overflow: hidden;
   border-radius: 8px;
   background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main.container .cards.case-list .card-thumb img,
+
 .cards.case-list .card-thumb img {
   width: 100%;
   height: 100%;
@@ -607,14 +614,33 @@ main.container .cards.case-list .card-thumb img,
   display: block;
 }
 
-/* content area */
-main.container .cards.case-list .card-content,
 .cards.case-list .card-content {
   flex: 1 1 auto;
-  min-width: 0; /* allow text wrapping inside flex */
+  min-width: 0;
+  width: 100%;
 }
 
-/* Case Study thumbnails and hero image */
+/* Responsive: stack cards vertically on mobile */
+@media (max-width: 760px) {
+  .cards.case-list .case-link {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .cards.case-list .card-thumb {
+    flex: none;
+    width: 100%;
+    height: 140px;
+    margin-bottom: 0.75rem;
+  }
+
+  .cards.case-list .card-content {
+    flex: none;
+    width: 100%;
+  }
+}
+
 /* Constrain images in article/content so they never exceed container */
 .content img,
 .article-hero {
@@ -706,12 +732,14 @@ nav a.active {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: var(--btn-text);
   position: relative;
   transition: background 0.3s ease;
 }
 
 .theme-toggle .icon {
   position: absolute;
+  color: inherit;
   width: 24px;
   height: 24px;
   stroke-width: 2;

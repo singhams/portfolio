@@ -3,7 +3,7 @@ layout: article
 tags: [Content Strategy, Metadata, Governance]
 title: Cross-platform Content Strategy
 excerpt: I led a multi-cohort UX research study to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
-image: /assets/images/artifacts/Roadmap.png
+image: /assets/images/artifacts/thumb/Roadmap.webp
 ---
 
 **My role**: I worked with one colleague as a partner on this project and did the bulk of the work and artifacts.
@@ -84,7 +84,7 @@ We built this framework out in an Airtable, which had three main tabs:
 
 ### Recommendations / Roadmap
 
-![Roadmap]({{ '/assets/images/artifacts/Roadmap.png' | relative_url }})
+![Roadmap]({{ '/assets/images/artifacts/full/Roadmap.webp' | relative_url }})
 
 Our roadmap outlined high-level tasks along with the skills and expertise required to carry them out. This proved to be a good starting point for facilitating a ‘next steps’ discussion with the wider stakeholder group.
 
