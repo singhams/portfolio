@@ -75,7 +75,6 @@ Sam’s persona captures the real frustration sellers face with content that’s
 ![Seller search workflows]({{ '/assets/images/artifacts/full/seller-workflows.webp' | relative_url }})
 
 Key Insight: Sellers struggled to find specific information because important content was embedded within larger, inconsistently structured assets like slide decks. Experienced sellers memorized where to locate details, creating a barrier for new users and causing time-consuming trial and error. While the idea of breaking assets into smaller “content chunks” was explored, sellers preferred consistent asset structures and clearer labeling. Our research highlighted the need for improved search and preview functions in the CMS, along with user-informed taxonomy design and training, to help sellers efficiently find the content they needed.
-Metadata recommendations for sales enablement content
 
 ### Recommendations for content metadata / re-tagging (from findings presenation)
 
