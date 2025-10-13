@@ -69,7 +69,6 @@ Both the “Alan” and “Sam” personas go beyond the usual focus on goals an
 ![Persona 2 - Sam]({{ '/assets/images/artifacts/full/Persona-sam.webp' | relative_url }})
 
 Sam’s persona captures the real frustration sellers face with content that’s hard to trust, incomplete, or not tailored to their customers’ needs. Even when they find case studies or materials, these often lack clear benefits, customer stories, or localization, making it tough to build a compelling sales narrative. This persona helped highlight that improving content quality and relevance is just as crucial as improving findability.
-Search workflow
 
 ### Seller search workflows (from findings presentation)
 
