@@ -2,7 +2,7 @@
 layout: article
 tags: [UX Research, Usability Study, Metadata]
 title: Research-Led Metadata Strategy to Enhance Sales Content Discovery
-excerpt: I led a multi-cohort UX research study to understand seller workflows, pain points, and information needs.
+excerpt: I led UX research and information architecture to consolidate 12 fragmented WordPress sites into one CMS, interviewing 16 sellers, crafting two personas, and drafting a metadata model that worked inside the platform’s flat-list limits — giving the sales team content they can actually find.
 image: /assets/images/artifacts/thumb/Persona-alan.webp
 ---
 
