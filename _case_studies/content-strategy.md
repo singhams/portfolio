@@ -2,7 +2,7 @@
 layout: article
 tags: [Content Strategy, Metadata, Governance]
 title: Cross-platform Content Strategy
-excerpt: Working shoulder-to-shoulder with one colleague, I led a full-current-state assessment (content, metadata, workflows, governance) and delivered an Airtable-based strategy kit with unified content types, goals, and metadata schema—plus a prioritized roadmap that empowered IT to finish the build themselves.
+excerpt: Working shoulder-to-shoulder with one colleague, I led a full-current-state assessment (content, metadata, workflows, governance) and delivered an Airtable-based strategy kit with unified content types, goals, and metadata schema - plus a prioritized roadmap that empowered IT to finish the build themselves.
 image: /assets/images/artifacts/thumb/Roadmap.webp
 ---
 
