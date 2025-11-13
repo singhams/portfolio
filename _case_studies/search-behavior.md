@@ -83,11 +83,3 @@ Findings directly informed feature prioritization and helped validate automation
 This project reinforced how foundational research can meet both short-term and long-term needs. While the immediate goal was helping engineers prioritize features, the broader outcome was a shared mental model of how creators think about finding and organizing their own work.  
 
 It also highlighted how UX research and information architecture intersect—especially when designing tools for managing creative information.
-
-![Search scenarios framework]({{ '/assets/images/artifacts/full/search-slide.webp' | relative_url }})
-
-Search scenarios visualized the five levels of user intent, from known items to discovery and automation.
-
-![Miro feature ranking board]({{ '/assets/images/artifacts/full/search-ranking.webp' | relative_url }})
-
-The Miro activity quantified which new “smart search” features users valued most—giving [client] clear prioritization input.
