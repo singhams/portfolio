@@ -67,6 +67,10 @@ Creators fell into distinct “information-seeking” modes—from knowing exact
 ### 4. Creators want automation for tedious editing
 The top-ranked requests centered on saving time: removing filler words, isolating speakers, and automatically syncing beats or transitions.
 
+For example, one editor wished that once he had identified an incorrect mouth animation, he could search for all instances of that word in his timeline, and replace the animations with the corrected one.
+
+![Viseme fix]({{ '/assets/images/artifacts/full/search-slide.webp' | relative_url }})
+
 ### 5. Discovery remains a persistent challenge
 Pop-ups and feature announcements were rarely remembered. Just-in-time aids like rich tooltips or visual cues worked far better.
 
