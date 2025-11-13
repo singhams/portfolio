@@ -1,8 +1,8 @@
 ---
 layout: article
 tags: [UX Research, Contextual Inquiry, Information Architecture]
-title: Understanding Creative Search Behavior in Adobe Video Apps
-excerpt: I led a foundational UX research study for Adobe’s Digital Video & Audio team, uncovering how creators search for and within media assets. The findings shaped priorities for Premiere Pro’s in-app search and inspired features like automated removal of “ums,” “ahs,” and “likes.”
+title: Understanding Creative Search Behavior in Video Apps
+excerpt: I led a foundational UX research study for a Digital Video & Audio software team, uncovering how creators search for and within media assets. The findings shaped priorities for a tool's in-app search and inspired features like automated removal of “ums,” “ahs,” and “likes.”
 image: /assets/images/artifacts/thumb/search-slide-thumb.webp
 ---
 
@@ -10,7 +10,7 @@ image: /assets/images/artifacts/thumb/search-slide-thumb.webp
 - **Skills:** Contextual Inquiry, Information Behavior, Research Synthesis, Stakeholder Facilitation  
 
 ## Context
-In 2020, Adobe’s Digital Video & Audio (DVA) team wanted to better understand how creators find media assets and use in-app search tools across Premiere Pro, After Effects, Audition, Rush, and Character Animator.  
+In 2020, a client's Digital Video & Audio (DVA) team wanted to better understand how creators find media assets and use in-app search tools across six different tools.  
 
 The machine learning engineers sponsoring the study needed to prioritize new “smart search” and automation features—but they also lacked a clear picture of how creators actually searched and what they expected from search tools.  
 
@@ -30,7 +30,6 @@ These questions helped us explore how users think about metadata, tagging, and d
 
 ## Methods
 - **Participants:** 17 total (creative professionals and hobbyists)  
-- **Tools studied:** Premiere Pro, After Effects, Audition, Rush, Character Animator  
 - **Format:** Fully remote contextual inquiry sessions  
 - **Activities:**  
   - On-screen observation of real search behaviors  
@@ -39,13 +38,13 @@ These questions helped us explore how users think about metadata, tagging, and d
 
 I led recruiting (via social media and Reddit groups), facilitated all sessions, and conducted synthesis through thematic clustering and cross-app comparison.
 
-A mid-study check-in with stakeholders revealed richer insights in the Premiere Pro and After Effects cohorts, so we pivoted to focus there—an example of agile study design improving both efficiency and depth.
+A mid-study check-in with stakeholders revealed richer insights in the [tool name] and [tool name] cohorts, so we pivoted to focus there—an example of agile study design improving both efficiency and depth.
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
 ## Key Findings
 
-### 1. Most asset searches happen outside Adobe apps
+### 1. Most asset searches happen outside [client] apps
 Creators rely on Finder or Explorer rather than in-app search. They use folder naming conventions, dates, and thumbnails instead of tags or metadata.
 
 > “Anything that kills a repetitive task is more important than a shiny feature.” — *Yoni, Motion Designer*
@@ -74,9 +73,9 @@ Pop-ups and feature announcements were rarely remembered. Just-in-time aids like
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
 ## Impact
-The research gave Adobe’s DVA and ML teams a grounded understanding of how professionals and hobbyists search for and within their assets.  
+The research gave [client]’s DVA and ML teams a grounded understanding of how professionals and hobbyists search for and within their assets.  
 
-Findings directly informed feature prioritization and helped validate automation features that later shipped in Premiere Pro—most notably, the **automatic filler word removal** tool that was a top-ranked user request.
+Findings directly informed feature prioritization and helped validate automation features that later shipped in [tool name]—most notably, the **automatic filler word removal** tool that was a top-ranked user request.
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
@@ -85,10 +84,10 @@ This project reinforced how foundational research can meet both short-term and l
 
 It also highlighted how UX research and information architecture intersect—especially when designing tools for managing creative information.
 
-![Search scenarios framework]({{ '/assets/images/artifacts/full/adobe-search-scenarios.webp' | relative_url }})
+![Search scenarios framework]({{ '/assets/images/artifacts/full/[client]-search-scenarios.webp' | relative_url }})
 
 Search scenarios visualized the five levels of user intent, from known items to discovery and automation.
 
-![Miro feature ranking board]({{ '/assets/images/artifacts/full/adobe-search-ranking.webp' | relative_url }})
+![Miro feature ranking board]({{ '/assets/images/artifacts/full/[client]-search-ranking.webp' | relative_url }})
 
-The Miro activity quantified which new “smart search” features users valued most—giving Adobe clear prioritization input.
+The Miro activity quantified which new “smart search” features users valued most—giving [client] clear prioritization input.
