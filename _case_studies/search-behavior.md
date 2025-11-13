@@ -8,7 +8,9 @@ featured: true
 ---
 
 - **Role:** Project Lead / UX Researcher  
-- **Skills:** Contextual Inquiry, Information Behavior, Research Synthesis, Stakeholder Facilitation  
+- **Skills:** Contextual Inquiry, Information Behavior, Research Synthesis, Stakeholder Facilitation
+
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div> 
 
 ## Context
 In 2020, a client's Digital Video & Audio (DVA) team wanted to better understand how creators find media assets and use in-app search tools across six different tools.  
