@@ -26,6 +26,7 @@ title: Home
 ## Featured Case Studies
 
 <div class="cards">
+{% assign featured = site.case_studies | where: "featured", true | slice: 0,3 %}
 {% for cs in site.case_studies %}
   <div class="card">
     <a href="{{ cs.url | relative_url }}">
