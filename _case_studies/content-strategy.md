@@ -7,6 +7,8 @@ image: /assets/images/artifacts/thumb/Roadmap.webp
 featured: false
 ---
 
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
+
 **My role**: I worked with one colleague as a partner on this project and did the bulk of the work and artifacts.
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
