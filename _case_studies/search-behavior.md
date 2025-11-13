@@ -48,6 +48,8 @@ I listed everything participants noted as the object of their searches in a sing
 
 ![Search targets]({{ '/assets/images/artifacts/full/search-targets.webp' | relative_url }})
 
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
+
 ## Key Findings
 
 ### 1. Most asset searches happen outside [client] apps
