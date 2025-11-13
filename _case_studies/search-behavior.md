@@ -42,6 +42,12 @@ A mid-study check-in with stakeholders revealed richer insights in the [tool nam
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
+## Research Questions Answered
+
+I listed everything participants noted as the object of their searches in a single summary slide for quick reference.
+
+![Search targets]({{ '/assets/images/artifacts/full/search-targets.webp' | relative_url }})
+
 ## Key Findings
 
 ### 1. Most asset searches happen outside [client] apps
