@@ -1,7 +1,7 @@
 ---
 layout: article
 tags: [UX Research, Usability Study]
-title: Making Pro Video Editing Software More Approachable
+title: Making Professional Video Editing Software More Approachable
 excerpt: I led a multi-cohort UX research study with non-professional video editors to identify friction points, opportunities for delight, and usability baselines for upcoming redesigns.
 image: /assets/images/artifacts/thumb/approachable.webp
 featured: true
