@@ -1,7 +1,7 @@
 ---
 layout: article
 tags: [UX Research, Contextual Inquiry, Information Architecture]
-title: Understanding Creative Search Behavior in Video Apps
+title: Understanding Search Behavior in Creative Video Apps
 excerpt: I led a foundational UX research study for a Digital Video & Audio software team, uncovering how creators search for and within media assets. The findings shaped priorities for a tool's in-app search and inspired features like automated removal of “ums,” “ahs,” and “likes.”
 image: /assets/images/artifacts/thumb/search-slide-thumb.webp
 featured: true
