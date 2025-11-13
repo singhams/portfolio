@@ -84,10 +84,10 @@ This project reinforced how foundational research can meet both short-term and l
 
 It also highlighted how UX research and information architecture intersect—especially when designing tools for managing creative information.
 
-![Search scenarios framework]({{ '/assets/images/artifacts/full/[client]-search-scenarios.webp' | relative_url }})
+![Search scenarios framework]({{ '/assets/images/artifacts/full/search-slide.webp' | relative_url }})
 
 Search scenarios visualized the five levels of user intent, from known items to discovery and automation.
 
-![Miro feature ranking board]({{ '/assets/images/artifacts/full/[client]-search-ranking.webp' | relative_url }})
+![Miro feature ranking board]({{ '/assets/images/artifacts/full/search-ranking.webp' | relative_url }})
 
 The Miro activity quantified which new “smart search” features users valued most—giving [client] clear prioritization input.
