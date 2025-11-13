@@ -6,9 +6,12 @@ excerpt: I led UX research and information architecture to consolidate 12 fragme
 image: /assets/images/artifacts/thumb/Persona-alan.webp
 featured: true
 ---
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
  - Role: Lead UX Researcher & Information Architect
  - Skills: UX Research, Metadata Modeling, Information Architecture, Stakeholder Alignment
+
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
 ## Context
 
