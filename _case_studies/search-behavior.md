@@ -6,6 +6,7 @@ excerpt: I led a foundational UX research study for a Digital Video & Audio soft
 image: /assets/images/artifacts/thumb/search-slide-thumb.webp
 featured: true
 ---
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
 - **Role:** Project Lead / UX Researcher  
 - **Skills:** Contextual Inquiry, Information Behavior, Research Synthesis, Stakeholder Facilitation
