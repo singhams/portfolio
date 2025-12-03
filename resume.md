@@ -54,18 +54,26 @@ Clients: Adobe, Intel, Intuit, Workday, Zillow, Okta, Meta Reality Labs, Microso
 ## Education
 
 <div class="exp-item" markdown="1">
-<p class="role-date">2016-2017</p>
-<h3 class="company"><a href="https://www.svcseattle.com/">School of Visual Concepts</a></h3> 
-<p class="role-title">Certificate: User Experience</p>
-</div>  
-
-<div class="exp-item" markdown="1">
-<p class="role-date">2000-2004</p>
+<p class="role-date">2004</p>
 <h3 class="company"><a href="https://www.evergreen.edu/">The Evergreen State College</a></h3> 
-<p class="role-title">BA/BS: Molecular Biology & Cognitive Science</p>
+<p class="role-title">Bachelor of Science: Molecular Biology & Cognitive Science</p>
 </div>
 
 <div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
+
+## Professional Development
+
+<div class="exp-item" markdown="1">
+<p class="role-date">2025</p>
+<h3 class="company"><a href="https:/www.pmi.org/">The Project Management Institute</a></h3> 
+<p class="role-title">Project Management Professional (PMP)</p>
+</div>
+
+<div class="exp-item" markdown="1">
+<p class="role-date">2017</p>
+<h3 class="company"><a href="https://www.svcseattle.com/">School of Visual Concepts</a></h3> 
+<p class="role-title">Certificate: User Experience</p>
+</div>  
 
 ## Technical Skills
 
