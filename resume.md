@@ -73,7 +73,9 @@ Clients: Adobe, Intel, Intuit, Workday, Zillow, Okta, Meta Reality Labs, Microso
 <p class="role-date">2017</p>
 <h3 class="company"><a href="https://www.svcseattle.com/">School of Visual Concepts</a></h3> 
 <p class="role-title">Certificate: User Experience</p>
-</div>  
+</div>
+
+<div class="wave-divider wave-divider--resume">{% include wave-divider.html %}</div>
 
 ## Technical Skills
 
