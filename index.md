@@ -5,8 +5,8 @@ title: Home
 
 <header class="hero">
   <h1>Sara Ingham</h1>
-  <h2>User Experience Strategist | UX Researcher | Information Architect</h2>
-  <p>I'm a UX Researcher with a background in information architecture and laboratory work. I specialize in uncovering insights that inform complex systems—whether it's onboarding in creative tools or the structure of large-scale digital ecosystems. I’ve led numerous research studies for companies like Adobe and Intel. I'm known for bridging disciplines, spotting what's actually important, and aligning teams with just the right amount of evidence.</p>
+  <h2>UX Researcher & Information Architect</h2>
+  <p>I work at the intersection of UX research, information architecture, and complex content systems. My work ranges from understanding how people onboard into creative tools to modeling the structures behind large-scale digital ecosystems. I’ve led research and IA projects for teams at Adobe and Intel, and I’m known for cutting through ambiguity, surfacing what actually matters, and aligning stakeholders with just the right amount of evidence.</p>
   <a href="{{ '/resume' | relative_url }}" class="btn">View Resume</a>
 </header>
 
