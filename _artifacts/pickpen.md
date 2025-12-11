@@ -1,7 +1,7 @@
 ---
 layout: article
-title: "Conference Poster"
-image: "/assets/images/artifacts/thumb/conference-poster.webp"
+title: "PickPen Infographic"
+image: "/assets/images/artifacts/thumb/PickPen.webp"
 order: 15
 featured: false
 ---
